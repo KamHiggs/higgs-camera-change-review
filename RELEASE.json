@@ -1,0 +1,23 @@
+{
+  "name": "Higgs Camera Change Review",
+  "version": "0.2.1-rc.1",
+  "status": "candidate_awaiting_owner_approval",
+  "feature_scope": "complete_for_first_experimental_release_per_owner",
+  "publication_authorized": false,
+  "published": false,
+  "license_status": "unadopted_owner_confirmation_required",
+  "source_implementation_version": "0.2.1-build1.2",
+  "core_sha256": {
+    "app.py": "b042d9a72ac3d25310afb4567eb4357fd90ece561215f22999315705a15c5610",
+    "sources.py": "34802dfcb9e71d14c477fbb6a2733fcba412751878016f0733dba2d2d97b43eb",
+    "engine.py": "a01d44fcf2ed4da8901a76888609a26b00ee66704ffd7212d9b1ad6be5ae9def",
+    "reporting.py": "60def1707ed053e9de64949dcc2f102bdf16156858df6a233e396f3f8917547f"
+  },
+  "runtime_dependencies": "Python standard library only; Python is not bundled",
+  "tested_python_versions": [
+    "3.9.6",
+    "3.12.14"
+  ],
+  "tested_platform": "macOS 26.6.2 arm64",
+  "hardware_qualified": false
+}

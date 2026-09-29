@@ -1,0 +1,14 @@
+{
+  "source_id": "FW-DEV",
+  "kind": "firmware",
+  "subject_id": "time_alignment",
+  "status": "active",
+  "revision": 1,
+  "supersedes": [],
+  "data": {
+    "revision": "FW-DEV-BASE",
+    "supported_policy": "shared",
+    "default_offset_ms": 0,
+    "behavior": "Adds one shared configured offset."
+  }
+}

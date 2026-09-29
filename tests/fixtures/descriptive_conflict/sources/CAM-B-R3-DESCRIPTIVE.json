@@ -1,0 +1,28 @@
+{
+  "source_id": "CAM-B-R3-DESCRIPTIVE",
+  "kind": "camera",
+  "subject_id": "CAM-B",
+  "status": "active",
+  "revision": 3,
+  "supersedes": [],
+  "data": {
+    "available": true,
+    "image_width_px": 1920,
+    "image_height_px": 1200,
+    "bytes_per_pixel": 1,
+    "max_fps": 60,
+    "power_W": 9,
+    "supply_range_V": [
+      20,
+      28
+    ],
+    "transport": "GigE-Vision",
+    "timestamp_bias_ms_by_variant": {
+      "V-SLOW": 4.0,
+      "V-FAST": 2.5
+    },
+    "timestamp_jitter_bound_ms": 0.1,
+    "migration_cost_points": 2,
+    "note": "Development descriptive-only disagreement; no new physical claim."
+  }
+}

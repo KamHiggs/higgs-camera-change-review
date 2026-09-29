@@ -1,0 +1,19 @@
+{
+  "source_id": "original-configuration",
+  "kind": "configuration",
+  "subject_id": "family",
+  "status": "active",
+  "revision": 1,
+  "supersedes": [],
+  "data": {
+    "camera_id": "retired",
+    "spec_source_id": "retired-spec",
+    "firmware_revision": "own-base",
+    "policy": "shared",
+    "offset_ms_by_variant": {
+      "idle": 0,
+      "inspect": 0,
+      "rapid": 0
+    }
+  }
+}

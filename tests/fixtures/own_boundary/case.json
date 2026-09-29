@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "case_id": "OWN-THREE-SPEED-BOUNDARY",
+  "variant_ids": [
+    "idle",
+    "inspect",
+    "rapid"
+  ],
+  "candidate_camera_ids": [
+    "steady",
+    "sample_only",
+    "premium"
+  ],
+  "base_firmware_revision": "own-base",
+  "source_inventory": [
+    {
+      "source_id": "req-idle",
+      "path": "facts/req-idle.json"
+    },
+    {
+      "source_id": "req-inspect",
+      "path": "facts/req-inspect.json"
+    },
+    {
+      "source_id": "req-rapid",
+      "path": "facts/req-rapid.json"
+    },
+    {
+      "source_id": "spec-steady",
+      "path": "facts/spec-steady.json"
+    },
+    {
+      "source_id": "spec-sample_only",
+      "path": "facts/spec-sample_only.json"
+    },
+    {
+      "source_id": "spec-premium",
+      "path": "facts/spec-premium.json"
+    },
+    {
+      "source_id": "original-configuration",
+      "path": "facts/original-configuration.json"
+    },
+    {
+      "source_id": "old-power",
+      "path": "facts/old-power.json"
+    }
+  ]
+}

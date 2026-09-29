@@ -1,0 +1,27 @@
+{
+  "source_id": "GRAPH-DEV",
+  "kind": "dependency_graph",
+  "subject_id": "family",
+  "status": "active",
+  "revision": 1,
+  "supersedes": [],
+  "data": {
+    "edges": [
+      {
+        "from": "V-ALPHA",
+        "to": "REQ-ALPHA",
+        "relation": "governed_by"
+      },
+      {
+        "from": "V-BETA",
+        "to": "REQ-BETA",
+        "relation": "governed_by"
+      },
+      {
+        "from": "V-GAMMA",
+        "to": "REQ-GAMMA",
+        "relation": "governed_by"
+      }
+    ]
+  }
+}

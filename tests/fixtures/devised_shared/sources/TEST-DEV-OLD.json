@@ -1,0 +1,28 @@
+{
+  "source_id": "TEST-DEV-OLD",
+  "kind": "test_record",
+  "subject_id": "TEST-DEV-OLD",
+  "status": "active",
+  "revision": 1,
+  "supersedes": [],
+  "data": {
+    "synthetic": true,
+    "metric": "registration_error_mm",
+    "configuration": {
+      "variant_id": "V-GAMMA",
+      "camera_id": "CAM-OLD",
+      "spec_source_id": "OLD-SPEC",
+      "firmware_revision": "FW-DEV-BASE",
+      "policy": "shared",
+      "offset_ms": 0
+    },
+    "observations": [
+      0.4,
+      0.5
+    ],
+    "recorded_limit": 0.8,
+    "claimed_result": "PASS",
+    "claims_to_establish_guaranteed_jitter_bound": false,
+    "note": "Author-invented fixture, not actual hardware execution."
+  }
+}

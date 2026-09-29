@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "case_id": "AUTHORED-SHARED-03",
+  "synthetic": true,
+  "variant_ids": [
+    "V-ALPHA",
+    "V-BETA",
+    "V-GAMMA"
+  ],
+  "candidate_camera_ids": [
+    "CAM-ECONOMY",
+    "CAM-PREMIUM"
+  ],
+  "base_firmware_revision": "FW-DEV-BASE",
+  "objective": "Replace unavailable baseline using same world contract; independently devised three-variant shared-policy case.",
+  "source_inventory": [
+    {
+      "source_id": "REQ-ALPHA",
+      "path": "sources/REQ-ALPHA.json"
+    },
+    {
+      "source_id": "REQ-BETA",
+      "path": "sources/REQ-BETA.json"
+    },
+    {
+      "source_id": "REQ-GAMMA",
+      "path": "sources/REQ-GAMMA.json"
+    },
+    {
+      "source_id": "OLD-SPEC",
+      "path": "sources/OLD-SPEC.json"
+    },
+    {
+      "source_id": "ECONOMY-SPEC",
+      "path": "sources/ECONOMY-SPEC.json"
+    },
+    {
+      "source_id": "PREMIUM-SPEC",
+      "path": "sources/PREMIUM-SPEC.json"
+    },
+    {
+      "source_id": "FW-DEV",
+      "path": "sources/FW-DEV.json"
+    },
+    {
+      "source_id": "CFG-DEV",
+      "path": "sources/CFG-DEV.json"
+    },
+    {
+      "source_id": "APPROVAL-DEV",
+      "path": "sources/APPROVAL-DEV.json"
+    },
+    {
+      "source_id": "GRAPH-DEV",
+      "path": "sources/GRAPH-DEV.json"
+    },
+    {
+      "source_id": "TEST-DEV-OLD",
+      "path": "sources/TEST-DEV-OLD.json"
+    }
+  ]
+}
