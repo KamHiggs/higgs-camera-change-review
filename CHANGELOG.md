@@ -1,24 +1,17 @@
-# Release changes
+# Change log
 
-## 0.2.1 — local portfolio release preparation, 29 September 2026
+## 0.3.0-rc.1 — local experimental candidate
 
-- Credit Kamden Higgs prominently and explain his project direction alongside the documented AI assistance.
-- Rewrite the README for an approachable synthetic-camera demonstration, saved report and portable commands.
-- Add MIT LICENSE with the owner-confirmed notice, Copyright (c) 2026 Kamden Higgs. Record the owner's origin declaration and update license status.
-- Preserve all six Python modules/runners, fixtures, engineering rules and test assertions exactly as in 0.2.1-rc.1. Preserve U01 and the other limitations.
-- Regenerate package identities for this separately identified release. Keep receipts and execution logs outside the public payload.
+- Integrates the existing camera.decision_questions method from Python CogniMap 0.1.2 through `app.py questions --case ... --camera ... --out ...`.
+- Same case-folder format; one captured in-memory case for all nested analysis. No embedded-case fallback.
+- Shared canonical resolver, solver, serializer and serialization guard; no second engine fork.
+- Exact thresholds, source-linked guarantee requests and known blockers in result.json and explanation.md. Two saved executed demonstrations included.
+- Necessary correction: analyze now reports a true numeric serialization limitation as numeric_encoding_error with exit 4, rather than input/analysis error with exit 2. No configuration is emitted on failure. Valid analyze outputs for the ten compared cases remain byte-identical.
+- Retains the original 28-method suite and ten cases; adds 18 combined-command test methods. Standalone capability regressions were separately replayed.
+- Updates obsolete release-status documentation and replaces stale parent release metadata with this candidate's identity. v0.2.1 itself is preserved.
 
-This entry records preparation, not a public release date. Publication remains subject to approval.
+This version is not published or hardware-qualified. No solver physics, policies, U01 interpretation, external acquisition, model calls or unrelated capabilities were added.
 
-## 0.2.1-rc.1 — 29 September 2026
+## 0.2.1 — preserved public baseline
 
-First experimental source-archive candidate derived from frozen implementation 0.2.1-build1.2. No feature expansion.
-
-- Bundle the public example, illustrative firmware and all nine additional fixtures used by the retained application suite/case runner.
-- Resolve runner fixture paths relative to the extracted package instead of the author's Mac or the former review-bundle layout.
-- Create log directories on clean extraction. Remove an unused import of the former input-root constant in the test runner.
-- Refuse batch path traversal and existing batch reuse, preventing accidental overwrite of runner evidence.
-- Add portable CLI instructions, input/output guidance, demonstration, limitations, attribution/license status, provenance and file manifest.
-- Exclude personal absolute paths, historical private transcripts/reviews and raw development/test output from the distributable.
-
-`app.py`, `sources.py`, `engine.py` and `reporting.py` are byte-identical to the frozen build. Test assertions and synthetic case JSON are unchanged. New release validation is recorded separately from historical experimental results.
+Published at https://github.com/KamHiggs/higgs-camera-change-review/releases/tag/v0.2.1 . Its approved archive SHA-256 is 645df210728fb68d04bf82ad2e22b2676cb2c75c930b2f35be3e107d35be881e. The saved publication verification records commit 9382e4475da66cb82eaec17ef436d770ad42eead and matching public source/asset hashes. This integration task made no GitHub or Git changes.

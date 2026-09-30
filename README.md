@@ -1,73 +1,69 @@
 # Higgs Camera Change Review
 
-**Created and led by Kamden Higgs.**  
-An experimental Higgs AI project developed through AI-assisted implementation and adversarial review.
+**Created and led by Kamden Higgs.** An experimental Higgs AI project developed through AI-assisted implementation and adversarial review.
 
-An offline engineering-change assistant demonstrated through a synthetic industrial-camera replacement scenario. It compares replacement options, checks engineering constraints and test-evidence applicability, and produces a review and revalidation plan.
+Evaluate a camera replacement, understand the uncertainty, and identify evidence that could change the decision.
 
-## The problem this example explores
+This offline Python application evaluates a supplied synthetic case against seven engineering constraints. Its new **Python CogniMap-derived evidence-question command** identifies the applicable guaranteed jitter bound a candidate would need, the policies that bound could support, and blockers that a jitter answer cannot resolve. It runs deterministically without an AI model, account, network service or external Python package.
 
-Replacing a camera can change timing, image resolution, throughput and power requirements. A previous test marked “PASS” may describe an old configuration or a different limit. This example asks: which replacement is supported by the current evidence, what is still unknown, and what needs to be tested again?
+**Version 0.3.0-rc.1 is a local release candidate, not published by this integration task.** The existing [v0.2.1 project](https://github.com/KamHiggs/higgs-camera-change-review) remains unchanged. This is synthetic software, not hardware-qualified engineering software.
 
-## What it does
+## See the demonstrations
 
-- Reads an explicit inventory of JSON requirements, camera specifications, revisions and saved test records.
-- Evaluates seven constraints: timing, resolution, frame rate, throughput, power, voltage and transport.
-- Compares shared and per-variant timestamp offsets, identifies established failures and missing evidence, and ranks established feasible options with known synthetic costs.
-- Checks whether saved test evidence applies to the proposed configuration.
-- Writes a local HTML review, structured results and a revalidation plan. When justified, it also emits a proposed timestamp adapter and configuration.
+These are saved outputs from actual local executions, not a hosted or running service:
 
-It is a deterministic Python application. It does not call an AI model or require an account, API key, network connection or external Python package at runtime.
+- [Existing engineering review](docs/example_review.html): CAM-B, per-variant offsets, five synthetic cost points.
+- [A guarantee could change the decision](docs/demonstrations/public/explanation.md): an applicable CAM-D jitter guarantee at or below 0.4 ms could support a shared-policy plan at two points.
+- [A different blocker prevents that conclusion](docs/demonstrations/blocked/explanation.md): CAM-D is stipulated to consume 11 W against a 10 W budget. A jitter answer alone is insufficient.
 
-## See the example first
+Typical values, finite samples and a saved PASS do not establish a guarantee. Cost points are not prices or monetary savings. These analyses do not obtain supplier evidence or authorize deployment.
 
-Download and unzip the approved release package. Open `docs/example_review.html` from the extracted folder in your browser. It is a saved, self-contained report from the synthetic public case; it does not run an interactive service.
+## Run your case
 
-The example selects CAM-B with per-variant offsets of −4 and −2.5 ms while explaining why old test evidence does not qualify that proposal. Costs are synthetic points, not prices. See the [demonstration guide](docs/DEMO.md).
+Use an existing CPython 3.9+ installation. This candidate was actually checked on macOS arm64 with CPython 3.9.6; other platforms/versions were not executed for this integration. Python is not bundled.
 
-## Run it locally
-
-Use an existing CPython 3.9 or newer installation. Actual checked environments and platform limitations are in [validation](docs/VALIDATION.md).
-
-In a terminal, change into the extracted `higgs-camera-change-review-0.2.1` folder, then run:
+From the extracted `higgs-camera-change-review-0.3.0-rc.1` folder:
 
 ```sh
 python3 -B app.py analyze --case examples/public_camera_change --out outputs/first-review
+python3 -B app.py questions --case examples/public_camera_change --camera CAM-D --out outputs/first-questions
+python3 -B app.py questions --case examples/blocked_camera_change --camera CAM-D --out outputs/blocked-questions
 ```
 
-Open `outputs/first-review/engineering_review.html`. The folder also contains `report.json` and `revalidation_plan.md`, plus `proposed_configuration.json` and `proposed_firmware.py` when a plan is supported. These are proposals, not deployment approval.
+`analyze` retains its existing case-folder interface and writes `engineering_review.html`, `report.json` and `revalidation_plan.md`, plus a proposed adapter/configuration when justified by the model and its serialization check.
 
-Use a new output name for each run. Existing nonempty outputs and paths overlapping the input case are refused. To run from elsewhere, use absolute paths to `app.py`, the case and the output, quoting paths containing spaces. If your Python launcher is `python` or `py -3`, substitute it for `python3`; those alternatives do not imply Windows was tested.
+`questions` uses the same case-folder format and a declared candidate ID. It writes `result.json` and `explanation.md` only. No request-format conversion or duplicate case entry is needed. Every nested analysis uses the single case snapshot captured by that command. Separate command invocations may see separate revisions; compare the source identities and preserve your input case.
+
+Choose a fresh output directory. Existing nonempty outputs and input-overlapping paths are refused. The new command also rejects symlinked output parents. For another working directory use absolute paths to `app.py`, `--case` and `--out`, quoting paths containing spaces.
+
+Prepare your own copied case using [input preparation](docs/INPUT_PREPARATION.md). Input preparation is manual; there is no PDF/OCR ingestion or automatic interpretation of manufacturer documents. Only the declared synthetic world is supported by `questions`.
+
+## Read a result accurately
+
+- `analyze`: exit 0 includes a completed `feasible_plan`, `insufficient_evidence` or `no_feasible_plan`; physical no-plan is not a software error.
+- `questions`: supported, blocked or not_needed analysis exits 0. Unsupported single-answer analysis exits 3 and retains the missing prerequisites. A current-decision numerical encoding failure exits 4. A failed hypothetical witness remains labeled inside an otherwise completed conditional analysis.
+- Malformed inputs return 2. Numerical encoding failure returns 4 without a justified executable configuration. Unexpected question-runtime failure returns 5.
+- Exact derived values use `{"$rational":["numerator","denominator"]}` in question results. The existing finite JSON serializer is still used for proposed configurations and rechecked against its existing tolerance.
+
+See the [integration contract](docs/DECISION_QUESTIONS_CONTRACT.md), [derivation and code trace](docs/COGNIMAP_INTEGRATION.md) and [limitations](docs/KNOWN_LIMITATIONS.md).
 
 ## Run the bundled checks
 
-From the extracted folder:
-
 ```sh
+python3 -B verify_package.py
 python3 -B test_app.py
-python3 -B run_cases.py --batch demo-check public devised_shared zero_radius mixed_zero_speed descriptive_conflict bias_equalized jitter_known all_blocked insufficient own_boundary
+python3 -B test_questions.py
+python3 -B run_cases.py --batch local-check public devised_shared zero_radius mixed_zero_speed descriptive_conflict bias_equalized jitter_known all_blocked insufficient own_boundary
 ```
 
-The first command runs the retained 28-method suite. The second runs ten bundled synthetic cases. They create `records/`, `test_runs/` and `outputs/` locally; these generated records are not part of the release. Choose a new batch name for a repeat. Both commands return nonzero when their checks fail. The full suite requires permission to create file/directory symlinks.
-
-## Important limitations
-
-This is an experimental prototype of a simplified engineering model, not a hardware-qualified product. Applying it to a real system requires engineering judgment and explicit approval. Input preparation is manual: there is no PDF/OCR ingestion, generalized unit conversion or automatic interpretation of manufacturer documents.
-
-Copy the example before preparing a case. Follow [input preparation](docs/INPUT_PREPARATION.md), the [world contract](docs/WORLD_CONTRACT.md) and [output interface](docs/INTERFACE.md). The latter documents retain historical challenge terminology; references to a judge do not create an approval authority.
-
-U01 remains: conflicting active camera records, including descriptive-only disagreements, can prevent selecting a specification identity even when agreed physical values remain usable. Read [all known limitations](docs/KNOWN_LIMITATIONS.md). Hardware performance, customer savings and superiority of the development method are not established by these synthetic checks.
-
-A completed analysis returns exit 0 for `feasible_plan`, `insufficient_evidence` or `no_feasible_plan`. Input/analysis errors return exit 2. A no-plan result is not a crash.
+The retained application suite has 28 methods; the combined-command suite has 18 methods with 51 CLI invocations. They exercise overlapping behavior, not 46 independent demonstrations. The ten-case runner also executes the emitted synthetic adapters. Test runs create local `records/`, `test_runs/` and `outputs/`; those logs are excluded from this package. Full tests require permission to create local symlinks. Choose a fresh batch name for repeats. See [actual validation scope](docs/VALIDATION.md).
 
 ## How this was built
 
-Kamden Higgs directed the project, requirements, coordination of design and reviews, and release decisions. A supplied CogniMap/design handoff guided AI-assisted implementation and adversarial review. Codex assisted implementation; the design lineage records contributions attributed to Claude, Gemini, DeepSeek and Grok with differing coverage. This does not imply Kamden hand-wrote every line, provider endorsement, or review of changes a reviewer did not inspect.
+Kamden Higgs directed the project, requirements, review coordination and release decisions. The original camera application followed a supplied CogniMap/design handoff. Python-native methods were developed with Solara / ChatGPT and Codex assistance, then the existing camera-specific method was integrated here. No model is called by the application. This shows reuse of executable methods with their rules, provenance and qualifications; it does not establish superiority over another well-engineered package.
 
-See [attribution](ATTRIBUTION.md), [provenance](PROVENANCE.json) and the [change log](CHANGELOG.md). Detailed private conversations and the internal development archive are excluded.
+[Attribution](ATTRIBUTION.md), [provenance](PROVENANCE.json) and [change log](CHANGELOG.md) identify the sources and changes. No provider endorsement or independently reviewed integration is implied.
 
 ## License and release status
 
-MIT — see [LICENSE](LICENSE) and [license status](LICENSE_STATUS.md). Copyright notice: © 2026 Kamden Higgs. Contribution records do not establish exclusive copyright in every generated element.
-
-Version 0.2.1 is prepared locally for owner publication approval. No public repository, release date, hosted demo or support service is claimed. `SHA256SUMS.json` records package file identities, excluding itself; it is not a signature or publication approval.
+The existing [MIT notice](LICENSE) names Kamden Higgs. See [license status](LICENSE_STATUS.md) for the scope of the retained notice and new candidate. Publication of this exact candidate requires separate owner approval. `SHA256SUMS.json` records package bytes, excluding itself; it is not an approval or digital signature.

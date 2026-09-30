@@ -20,3 +20,12 @@ The [MIT license](LICENSE) is adopted for release material Kamden has authority 
 No third-party Python distributions, binaries, fonts, images, datasets, browser assets, provider clients or logos are bundled. Python and its standard library are supplied by the user, not distributed in this archive.
 
 Private conversations, the full internal development history and raw execution records are excluded. This release makes no claim of hardware qualification, customer demand, savings or a controlled CogniMap advantage.
+
+
+## Camera evidence-question integration — 0.3.0-rc.1
+
+Initial Python-native knowledge, procedures and simulation: Solara / ChatGPT. Scoped numeric-error correction: Solara. Existing decision_questions method and its development cases: Codex, directed by Kamden. Case-folder integration, canonical runtime consolidation, CLI regressions and release documentation: Codex in this authorized session.
+
+Only camera-specific helpers and the decision method are included; shared-power examples, other cartridges, guided practice, private discussions and internal logs are excluded. Source file hashes and transformations are in PROVENANCE.json. The inherited engineering solver/report renderer, original camera tests and original examples/fixtures are unchanged. The source loader has only its documented optional capture-reader hook.
+
+This is implementation lineage, not independent approval of the combined release or comparative evidence for the development method. The new blocked example is a disclosed synthetic change to CAM-D power, not a new supplier observation.

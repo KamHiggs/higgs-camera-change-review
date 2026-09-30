@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "case_id": "DEMO-CAM-D-POWER-BLOCKED",
+  "synthetic": true,
+  "variant_ids": [
+    "V-SLOW",
+    "V-FAST"
+  ],
+  "candidate_camera_ids": [
+    "CAM-B",
+    "CAM-C",
+    "CAM-D"
+  ],
+  "base_firmware_revision": "FW-1.0",
+  "objective": "Replace unavailable baseline camera across the family under WORLD_CONTRACT.md.",
+  "source_inventory": [
+    {
+      "source_id": "REQ-SLOW",
+      "path": "sources/REQ-SLOW.json"
+    },
+    {
+      "source_id": "REQ-FAST",
+      "path": "sources/REQ-FAST.json"
+    },
+    {
+      "source_id": "CAM-A-R1",
+      "path": "sources/CAM-A-R1.json"
+    },
+    {
+      "source_id": "CAM-B-R1",
+      "path": "sources/CAM-B-R1.json"
+    },
+    {
+      "source_id": "CAM-B-R2",
+      "path": "sources/CAM-B-R2.json"
+    },
+    {
+      "source_id": "CAM-C-R1",
+      "path": "sources/CAM-C-R1.json"
+    },
+    {
+      "source_id": "CAM-D-R1",
+      "path": "sources/CAM-D-R1.json"
+    },
+    {
+      "source_id": "FW-BASE",
+      "path": "sources/FW-BASE.json"
+    },
+    {
+      "source_id": "CONFIG-BASE",
+      "path": "sources/CONFIG-BASE.json"
+    },
+    {
+      "source_id": "TEST-A-SLOW",
+      "path": "sources/TEST-A-SLOW.json"
+    },
+    {
+      "source_id": "TEST-A-FAST",
+      "path": "sources/TEST-A-FAST.json"
+    },
+    {
+      "source_id": "TEST-B-FAST",
+      "path": "sources/TEST-B-FAST.json"
+    },
+    {
+      "source_id": "TEST-D-SAMPLE",
+      "path": "sources/TEST-D-SAMPLE.json"
+    },
+    {
+      "source_id": "DEC-APPROVAL",
+      "path": "sources/DEC-APPROVAL.json"
+    },
+    {
+      "source_id": "GRAPH-BASE",
+      "path": "sources/GRAPH-BASE.json"
+    }
+  ]
+}

@@ -1,19 +1,13 @@
-# Read the synthetic camera-change example
+# Demonstration: evaluate, then identify useful evidence
 
-After following the README quick start, open the generated `engineering_review.html` locally.
+The bundled scenarios are synthetic and user-prepared. No supplier or hardware claim is authenticated.
 
-1. Start with the boundary: a synthetic prediction and unapproved proposal, not a hardware qualification.
-2. Find `TEST-B-FAST`. Its saved PASS conflicts with observations 3.35 and 3.4 mm against its own 1 mm limit. The report also distinguishes stale firmware/policy/offset fields. A contradiction and stale applicability are different findings.
-3. Compare CAM-B's slow interval `[-4.8, -3.2]` with its fast interval `[-2.8, -2.2]`. They do not overlap; the selected per-variant offsets are −4 and −2.5 ms.
-4. Inspect CAM-D's missing guaranteed jitter bound. Its typical value and finite sample do not supply a guarantee. The selected CAM-B cost is 5 synthetic points; unresolved CAM-D could be cheaper. This is a minimum among established feasible plans, not a proven optimum over unknown facts.
-5. Review the exact proposed configuration and required retests. The generated adapter only adds the selected offset and rejects unknown variants. It does not read a camera or actuate equipment.
+1. Run `python3 -B app.py analyze --case examples/public_camera_change --out outputs/demo-review` and open its engineering_review.html. The established plan is CAM-B/per_variant at five synthetic points.
+2. Run `python3 -B app.py questions --case examples/public_camera_change --camera CAM-D --out outputs/demo-question`. Open explanation.md. Both policy domains include guaranteed jitter j <= 2/5 ms (0.4 ms). Shared costs two points; per_variant costs five. Read the cited source, revision, field and variant conditions. The typical value and saved sample are insufficient.
+3. Run `python3 -B app.py questions --case examples/blocked_camera_change --camera CAM-D --out outputs/demo-blocked`. CAM-D power is stipulated as 11 W. The fast variant permits 10 W. The method identifies the failure and withholds a jitter-only sufficient evidence request.
 
-For a justified refusal, run a separate named batch:
+Saved outputs from these last two commands are in demonstrations/public and demonstrations/blocked, alongside their exact result.json files. They are actual author-run outputs, not screenshots or reconstructed claims. Their source_sha256 entries bind the case files used. Only the blocked case ID and CAM-D power differ from the public case.
 
-```sh
-python3 -B run_cases.py --batch refusal-example descriptive_conflict
-```
+The ordinary review remains available as example_review.html. Re-running the original public case reproduced it byte for byte.
 
-The result is `insufficient_evidence`. Explain U01: a descriptive source conflict can prevent selecting one specification identity even though the agreed physical fields pass. Do not call this proof of physical impossibility.
-
-All supplied cases and observations are synthetic. Source IDs, units and failure records are part of the demonstration; no hardware result or customer endorsement is implied.
+The value being demonstrated is actionable conditional analysis: which missing guarantee could change the selected option, and when it cannot help alone. No guarantee is obtained, input rewritten, configuration deployed, or savings measured. The new command emits no firmware/configuration. Each invocation captures its own inputs; freeze a copied case for a multi-command presentation.

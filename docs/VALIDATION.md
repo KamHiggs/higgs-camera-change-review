@@ -1,30 +1,21 @@
-# Validation scope and recorded checks
+# Actual integration validation — 0.3.0-rc.1
 
-## Historical 0.2.1-rc.1 checks — 29 September 2026
+Author-run local checks; no independent integration approval. Environment: macOS 26.6.2 arm64, CPython 3.9.6 (Clang 21.0.0). No installations, models, services or hardware used. Earlier releases' other interpreter checks do not transfer to this version.
 
-Checked on macOS 26.6.2 arm64 in separate relocated scratch copies. No frozen build was executed in place or edited. These checks concern packaging and bounded software behavior, not hardware qualification or customer value.
-
-| Check | Actual result |
+| Check | Actual result / scope |
 |---|---|
-| Retained application suite on installed CPython 3.9.6 | 28 methods passed; 76 CLI invocations; zero failures/errors. |
-| Same retained suite on installed CPython 3.12.14 | 28 methods passed; 76 CLI invocations; zero failures/errors. |
-| All ten bundled case-runner cases on Python 3.9.6 | Ten completed, with expected feasible/insufficient/no-feasible statuses and unchanged inputs. |
-| README quick start on both interpreters | Passed. All five public outputs match the frozen public outputs byte for byte. |
-| Relocation | Passed from paths containing spaces and non-ASCII characters, with both package-local and unrelated working directories. |
-| Refusal behavior | Nonempty application output refused unchanged; existing runner batch refused unchanged; escaping batch name rejected. |
-| Browser check | Actual generated HTML opened locally in already-installed Chrome. No page errors or HTTP(S) resource requests; no horizontal document overflow at 1440 or 1280 pixels. Top and evidence sections visually inspected. |
-| Runtime source identity | Four application modules remain byte-identical to frozen implementation 0.2.1-build1.2. |
+| Starting archives | v0.2.1 approved SHA-256 and 180 manifest entries; Python CogniMap 0.1.2 SHA-256 and 133 manifest entries verified. All extracted bytes match saved source copies. |
+| Published-baseline app suite | 28 methods pass in separate scratch; 76 CLI invocations. |
+| Integrated retained app suite | The same 28 methods pass; same 76 CLI invocations. |
+| Ten bundled cases | All ten complete; emitted adapters exercised for selected plans and unknown-variant refusals. |
+| Baseline regression comparison | All 44 emitted files across ten cases byte-identical. No such claim is made for the deliberately corrected numeric error response. |
+| Standalone upstream regressions | Original DecisionQuestionsTests: 16/16; NumericEncodingRegressionTests: 8/8. Separate version and execution from integrated tests. |
+| Combined command | 18/18 methods with 51 CLI invocations: actual case folders, exact decimals, renamed IDs, 2/3/4 variants, separate domains, equality/neighbors, blockers/unknowns, U01, supersession, malformed cases, encoding failures, output protection and snapshot isolation. |
+| Standalone comparison | 12/12 inner result and normalized envelope matches; metadata and CLI exit differences explicitly documented. Same inherited solver, not independent physics oracle. |
+| Demonstrations | Both saved examples are actual outputs from the integrated command on the bundled case folders. |
 
-The two suite runs are compatibility checks of the same 28-method suite, not 56 independent cases. The full suite also executes generated adapters against emitted configurations, including unknown-variant refusals.
+The final clean-extraction execution and manifest results are recorded in the detached integration receipt. This public validation table records checks actually completed during development. Repeated final runs are reproducibility checks, not additional independent cases. Counts above overlap and must not be added into a single success-rate claim.
 
-Seven case-runner results are feasible plans. `descriptive_conflict` and `insufficient` return insufficient evidence; `all_blocked` returns no feasible plan. A no-plan analysis is not an application crash.
+No unplanned application/test failure occurred in the first full development suites. Expected negative cases deliberately returned refusals/errors; raw commands and results are retained in the detached local evidence record. No private execution logs or local absolute paths are bundled here.
 
-One browser-check attempt stopped before opening the HTML because the bundled automation browser binary was absent. The check then used already-installed Chrome; nothing was installed. That tooling stop is retained in detached release records and was not an application failure.
-
-Linux, Windows and other Python versions were not executed here. A Windows account without symlink privileges may not run the full path-refusal suite. No OS-wide network isolation test, security certification, hardware run or customer-case validation was performed. Dense report formatting and broader platform coverage are optional follow-up work, not newly added features in this candidate.
-
-Final archive extraction, manifest, privacy and frozen-source preservation checks are recorded in the detached owner-facing release report/receipt. Raw execution logs contain local workspace paths and are deliberately excluded from this distributable.
-
-## Portfolio package 0.2.1
-
-The six Python application/runner files and every retained example/fixture file are byte-identical to 0.2.1-rc.1. The table above records the prior candidate checks, not a claim of new cross-platform coverage. Current clean-extraction quick-start and bundled-check results are recorded in the detached owner handoff and receipt for this exact archive. Those records are excluded from the public payload because they include local execution paths. No new hardware or customer experiment is part of this preparation.
+Remaining limits: no Windows/Linux or other Python execution for this integration; no hardware calibration, supplier guarantee authentication, measured customer outcome, comparative CogniMap study or external independent review. Snapshot capture is not a lock against hostile concurrent file mutation. Local Python is trusted executable code.

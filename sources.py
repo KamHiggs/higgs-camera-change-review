@@ -94,14 +94,15 @@ def validate_data(data, label):
                 string(edge.get('to'), loc + '/to')
 
 
-def load_case(case_dir):
+def load_case(case_dir, read_document=None):
+    read_document = read_json if read_document is None else read_document
     root = Path(case_dir).resolve(strict=True)
     if not root.is_dir():
         raise InputError('Case must be a directory')
     case_path = (root / 'case.json').resolve(strict=True)
     if not inside(case_path, root):
         raise InputError('case.json escapes case directory')
-    case = read_json(case_path)
+    case = read_document(case_path)
     if not isinstance(case, dict):
         raise InputError('case.json must be an object')
     string(case.get('case_id'), 'case_id')
@@ -134,7 +135,7 @@ def load_case(case_dir):
         if path in paths:
             raise InputError('Duplicate inventory path: ' + rel)
         paths.add(path)
-        rec = read_json(path)
+        rec = read_document(path)
         if not isinstance(rec, dict) or rec.get('source_id') != sid:
             raise InputError('Inventory/source identity mismatch: ' + sid)
         for key in ('kind','status'):

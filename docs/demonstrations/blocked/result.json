@@ -1,0 +1,144 @@
+{
+  "interface_version": "higgs.python-cognimap/1",
+  "cartridge_id": "camera",
+  "cartridge_version": "0.1.2",
+  "operation": "decision_questions",
+  "execution_status": "completed",
+  "decision_status": "conditional_evidence_analysis",
+  "deployment_qualified": false,
+  "human_approval_recorded": false,
+  "request_identity": "54fb8553fef987ca86390909fe95c7b67797679b2b5f6a4fb220039448944fc4",
+  "run_kind": "conditional_evidence_analysis",
+  "result": {
+    "decision_status": "conditional_evidence_analysis",
+    "analysis_status": "blocked",
+    "run_kind": "conditional_evidence_analysis",
+    "model_id": "EC-SYNTHETIC-1.0",
+    "cartridge_version": "0.1.2",
+    "base_input_identity": "6d87cc9d8f641cb48cb61485f7b14910d824cf7c5732230458902a84d852dd48",
+    "base_unchanged": true,
+    "current_decision": {
+      "execution_status": "completed",
+      "decision_status": "feasible_plan",
+      "input_identity": "6d87cc9d8f641cb48cb61485f7b14910d824cf7c5732230458902a84d852dd48",
+      "request_identity": "b6718be5a213862a6ef0ba31a582f9bfed4a483b117fa3f4e9dc26e0bcbbf179",
+      "cartridge_version": "0.1.2",
+      "selected_plan": {
+        "camera_id": "CAM-B",
+        "spec_source_id": "CAM-B-R2",
+        "policy": "per_variant",
+        "offset_ms_by_variant": {
+          "V-SLOW": -4,
+          "V-FAST": -2.5
+        },
+        "firmware_revision": "FW-1.0-PROPOSED-per_variant",
+        "cost_points": 5,
+        "optimality": "minimum_among_established_feasible_plans",
+        "unresolved_cheaper_candidates": [],
+        "requires_human_approval": true,
+        "deployment_qualified": false
+      },
+      "cost_points_exact": 5,
+      "error": null
+    },
+    "target": {
+      "camera_id": "CAM-D",
+      "field": "timestamp_jitter_bound_ms",
+      "source_id": "CAM-D-R1",
+      "source_ids": [
+        "CAM-D-R1"
+      ],
+      "spec_revision": 1,
+      "requested_locator": "/data/timestamp_jitter_bound_ms",
+      "locators": [
+        {
+          "source_id": "CAM-D-R1",
+          "file": "sources/CAM-D-R1.json",
+          "locator": "/data/timestamp_jitter_bound_ms",
+          "requested_locator": "/data/timestamp_jitter_bound_ms",
+          "source_identity": "c9d63affc0a745a51419a4f72b383f675c1d6ff4161b5f03f95ece3eed957aa4"
+        }
+      ]
+    },
+    "blockers": [
+      "V-FAST: power: established failure"
+    ],
+    "blocker_details": [
+      {
+        "constraint": "power",
+        "status": "fail",
+        "value": 11,
+        "limit": 10,
+        "comparison": "<=",
+        "missing_fields": [],
+        "source_ids": [
+          "CAM-D-R1",
+          "REQ-FAST"
+        ],
+        "locators": [
+          {
+            "source_id": "CAM-D-R1",
+            "locator": "/data/power_W",
+            "requested_locator": "/data/power_W",
+            "field_present": true
+          },
+          {
+            "source_id": "REQ-FAST",
+            "locator": "/data/power_budget_W",
+            "requested_locator": "/data/power_budget_W",
+            "field_present": true
+          }
+        ],
+        "variant_id": "V-FAST"
+      }
+    ],
+    "remaining_unknowns": [],
+    "policies": [],
+    "regions": [],
+    "derivation": [],
+    "evidence_request": null,
+    "executable_configuration_promised": false,
+    "deployment_qualified": false,
+    "human_approval_recorded": false,
+    "rule_ids": [
+      "R-AUTH",
+      "R-U01",
+      "R-TIME",
+      "R-SELECT",
+      "R-SERIAL",
+      "R-EVIDENCE",
+      "R-SIM"
+    ],
+    "limitations": [
+      "Synthetic model only; facts are supplied, not independently authenticated.",
+      "Cost comparison covers established plans only; unresolved other candidates can still matter.",
+      "Representative previews are hypothetical witnesses, not a proof of encoding over a whole region."
+    ],
+    "explanation": "Candidate: CAM-D. Current decision: feasible_plan.\n\nAnalysis: blocked.\n\nJitter alone cannot overcome: V-FAST: power: established failure.\n\nV-FAST power: value 11 must satisfy <= 10; source locators are retained in blocker_details.\n\nNo jitter-only request is issued as sufficient to improve or add a tied option to this decision.\n\nSynthetic model only; facts are supplied, not independently authenticated.\n\nCost comparison covers established plans only; unresolved other candidates can still matter.\n\nRepresentative previews are hypothetical witnesses, not a proof of encoding over a whole region.\n\nMathematical conditions are not a guaranteed executable configuration. No supplier fact, deployment approval, or hardware qualification was created."
+  },
+  "integration": {
+    "application": "Higgs Camera Change Review",
+    "version": "0.3.0-rc.1",
+    "method_origin": "Higgs Python CogniMap 0.1.2",
+    "case_id": "DEMO-CAM-D-POWER-BLOCKED",
+    "source_sha256": {
+      "case.json": "0fb082ca0dad4b7dd502a20fbe5686a7a13a2de2ae3d32f8b3cb1622caa75079",
+      "sources/REQ-SLOW.json": "2b51bf1964268d89456e2a0fd87f060b46c222b5b23bdd454c04334e67068ead",
+      "sources/REQ-FAST.json": "1261be68c14b519cd7bc0251f1ed22c637f47e2b1c0790018a25ee127ddec8c4",
+      "sources/CAM-A-R1.json": "51b3f7bd560fffb87f21b33b2ce8b44ae33577b26967ef7ccc2aa117dc2294eb",
+      "sources/CAM-B-R1.json": "fbcc361f08ad310d58a485450c004db3e42db57a46403ddad3c88a7507cce199",
+      "sources/CAM-B-R2.json": "9e7d20b4db8a25aa3a34d1ebd49239761176ed96fc4dcd88ec4bd075be53a75f",
+      "sources/CAM-C-R1.json": "46f349348f46532bf7b5a798bd2486bc21fed6176fbf88911ad16bd7339883ca",
+      "sources/CAM-D-R1.json": "15ac5c92f4ea55df9693a8b0699d5b1cb1ae1e328eba11390c935c409e963a00",
+      "sources/FW-BASE.json": "871e3dee5d44257793967ad9c00736bc3bf8e685422561b55416a7ded99d4b88",
+      "sources/CONFIG-BASE.json": "96dfa9a1756063e9a29db93104e4206e1fbf451ce68dfe726991e17f7b331af9",
+      "sources/TEST-A-SLOW.json": "13e347eb36d96fa75aa340f94978c702f59750a2ed44066b36b501a3a9404137",
+      "sources/TEST-A-FAST.json": "f5593588e3d4c494d1044dc237c652b9b21352b32f87ae2ea884e8e66811b0dc",
+      "sources/TEST-B-FAST.json": "a401d6a4fb73cbdf6960ea2db4a9031052815f3206347f5eaab31782e971e141",
+      "sources/TEST-D-SAMPLE.json": "8d464d0f337eb87aa952f0851c018ab644001fb9a024a8aca6a5968926c05115",
+      "sources/DEC-APPROVAL.json": "689476b8d32c370969fb728b90ff88ef823b217698c7bb84a4289e5caba7051e",
+      "sources/GRAPH-BASE.json": "619a7ee75b22aa4e0ddc6023fc92a7b36dc579a0235fa27b59e6b31168e57e25"
+    },
+    "snapshot_kind": "one loaded case; no nested disk reads"
+  }
+}

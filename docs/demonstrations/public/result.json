@@ -1,0 +1,1182 @@
+{
+  "interface_version": "higgs.python-cognimap/1",
+  "cartridge_id": "camera",
+  "cartridge_version": "0.1.2",
+  "operation": "decision_questions",
+  "execution_status": "completed",
+  "decision_status": "conditional_evidence_analysis",
+  "deployment_qualified": false,
+  "human_approval_recorded": false,
+  "request_identity": "5c535985bd432567e2fa88ad37dbf92633888de36ee74774988e1c686f48258a",
+  "run_kind": "conditional_evidence_analysis",
+  "result": {
+    "decision_status": "conditional_evidence_analysis",
+    "analysis_status": "supported",
+    "run_kind": "conditional_evidence_analysis",
+    "model_id": "EC-SYNTHETIC-1.0",
+    "cartridge_version": "0.1.2",
+    "base_input_identity": "475173c304667da43ab2f988c56106c13b9f22f4abd609554ecc38d7bb5fb613",
+    "base_unchanged": true,
+    "current_decision": {
+      "execution_status": "completed",
+      "decision_status": "feasible_plan",
+      "input_identity": "475173c304667da43ab2f988c56106c13b9f22f4abd609554ecc38d7bb5fb613",
+      "request_identity": "ce62319908a301d8fb79e4ba0d7c3c2148714025d545664f2dd30982aa483de6",
+      "cartridge_version": "0.1.2",
+      "selected_plan": {
+        "camera_id": "CAM-B",
+        "spec_source_id": "CAM-B-R2",
+        "policy": "per_variant",
+        "offset_ms_by_variant": {
+          "V-SLOW": -4,
+          "V-FAST": -2.5
+        },
+        "firmware_revision": "FW-1.0-PROPOSED-per_variant",
+        "cost_points": 5,
+        "optimality": "minimum_among_established_feasible_plans",
+        "unresolved_cheaper_candidates": [
+          {
+            "camera_id": "CAM-D",
+            "potential_cost_points": 2,
+            "reason": "Possibly cheaper/incomparable; Missing or conflicting physical facts"
+          }
+        ],
+        "requires_human_approval": true,
+        "deployment_qualified": false
+      },
+      "cost_points_exact": 5,
+      "error": null
+    },
+    "target": {
+      "camera_id": "CAM-D",
+      "field": "timestamp_jitter_bound_ms",
+      "source_id": "CAM-D-R1",
+      "source_ids": [
+        "CAM-D-R1"
+      ],
+      "spec_revision": 1,
+      "requested_locator": "/data/timestamp_jitter_bound_ms",
+      "locators": [
+        {
+          "source_id": "CAM-D-R1",
+          "file": "sources/CAM-D-R1.json",
+          "locator": "/data/timestamp_jitter_bound_ms",
+          "requested_locator": "/data/timestamp_jitter_bound_ms",
+          "source_identity": "a2da307268b93b4cc3789e497e5f73167a35f3434b712196481aed0e887fb5b5"
+        }
+      ]
+    },
+    "blockers": [],
+    "blocker_details": [],
+    "remaining_unknowns": [],
+    "policies": [
+      {
+        "policy": "shared",
+        "threshold_ms": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "units": "ms",
+        "domain": {
+          "kind": "bounded",
+          "lower_ms": {
+            "$rational": [
+              "0",
+              "1"
+            ]
+          },
+          "upper_ms": {
+            "$rational": [
+              "2",
+              "5"
+            ]
+          },
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "meaning": "nonnegative guaranteed jitter; mathematical domain only"
+        },
+        "boundary_outcomes": {
+          "below": "mathematically_feasible",
+          "at": "mathematically_feasible",
+          "above": "mathematically_infeasible"
+        },
+        "controlling_constraints": {
+          "lower_controlling_variants": [
+            "V-FAST"
+          ],
+          "upper_controlling_variants": [
+            "V-FAST"
+          ]
+        },
+        "cost_points": 2,
+        "effect_if_this_policy_feasible": "reduce_established_cost",
+        "equation_reference": "docs/DECISION_QUESTIONS_CONTRACT.md",
+        "decision_scope": "conditional_mathematics_only",
+        "guarantee_required": true
+      },
+      {
+        "policy": "per_variant",
+        "threshold_ms": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "units": "ms",
+        "domain": {
+          "kind": "bounded",
+          "lower_ms": {
+            "$rational": [
+              "0",
+              "1"
+            ]
+          },
+          "upper_ms": {
+            "$rational": [
+              "2",
+              "5"
+            ]
+          },
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "meaning": "nonnegative guaranteed jitter; mathematical domain only"
+        },
+        "boundary_outcomes": {
+          "below": "mathematically_feasible",
+          "at": "mathematically_feasible",
+          "above": "mathematically_infeasible"
+        },
+        "controlling_constraints": {
+          "limiting_variants": [
+            "V-FAST"
+          ]
+        },
+        "cost_points": 5,
+        "effect_if_this_policy_feasible": "add_equal_cost_alternative",
+        "equation_reference": "docs/DECISION_QUESTIONS_CONTRACT.md",
+        "decision_scope": "conditional_mathematics_only",
+        "guarantee_required": true
+      }
+    ],
+    "regions": [
+      {
+        "lower_ms": {
+          "$rational": [
+            "0",
+            "1"
+          ]
+        },
+        "upper_ms": {
+          "$rational": [
+            "0",
+            "1"
+          ]
+        },
+        "lower_inclusive": true,
+        "upper_inclusive": true,
+        "representative_ms": {
+          "$rational": [
+            "0",
+            "1"
+          ]
+        },
+        "decision_scope": "conditional_mathematics_only",
+        "feasible_target_policies": [
+          "shared",
+          "per_variant"
+        ],
+        "best_target_policy": "shared",
+        "target_cost_points": 2,
+        "effect": "reduce_established_cost",
+        "preview": {
+          "execution_status": "completed",
+          "hypothetical": true,
+          "decision_scope": "hypothetical_only",
+          "assumed_guaranteed_jitter_ms": {
+            "$rational": [
+              "0",
+              "1"
+            ]
+          },
+          "coverage": "One representative only; not proof for the whole region",
+          "error": null,
+          "target_selected_and_serialized": true,
+          "input_identity": "4215d7bd52f99bb5afa313599b7ac7d22e3ea940ae0785eea1ea5a40b126bd89",
+          "assumption": {
+            "base_source_id": "CAM-D-R1",
+            "source_id": "CAM-D-R1--HYP-1",
+            "virtual_path": "scenario_sources/hypothesis-01.json",
+            "source_record": {
+              "source_id": "CAM-D-R1--HYP-1",
+              "kind": "camera",
+              "subject_id": "CAM-D",
+              "status": "active",
+              "revision": "hypothesis-1",
+              "supersedes": [
+                "CAM-D-R1"
+              ],
+              "data": {
+                "available": true,
+                "image_width_px": 2048,
+                "image_height_px": 1024,
+                "bytes_per_pixel": 1,
+                "max_fps": 60,
+                "power_W": 8,
+                "supply_range_V": [
+                  20,
+                  28
+                ],
+                "transport": "GigE-Vision",
+                "timestamp_bias_ms_by_variant": {
+                  "V-SLOW": 0,
+                  "V-FAST": 0
+                },
+                "timestamp_jitter_bound_ms": {
+                  "$rational": [
+                    "0",
+                    "1"
+                  ]
+                },
+                "migration_cost_points": 2,
+                "typical_timestamp_jitter_ms": {
+                  "$rational": [
+                    "1",
+                    "20"
+                  ]
+                }
+              },
+              "epistemic_kind": "hypothetical_assumption"
+            },
+            "field": "/data/timestamp_jitter_bound_ms",
+            "hypothetical_value_ms": {
+              "$rational": [
+                "0",
+                "1"
+              ]
+            },
+            "evidence_kind": "hypothetical_assumption",
+            "promoted_to_fact": false
+          },
+          "result": {
+            "decision_scope": "hypothetical_only",
+            "hypothetical": true,
+            "decision_status": "feasible_plan",
+            "selected_plan": {
+              "camera_id": "CAM-D",
+              "spec_source_id": "CAM-D-R1--HYP-1",
+              "policy": "shared",
+              "offset_ms_by_variant": {
+                "V-SLOW": 0,
+                "V-FAST": 0
+              },
+              "firmware_revision": "FW-1.0",
+              "cost_points": 2,
+              "optimality": "minimum_among_established_feasible_plans",
+              "unresolved_cheaper_candidates": [],
+              "requires_human_approval": true,
+              "deployment_qualified": false,
+              "hypothetical": true
+            },
+            "serialized_plan_checks": [
+              {
+                "variant_id": "V-SLOW",
+                "serialized_offset_ms": 0,
+                "worst_case_error_mm": 0.04,
+                "limit_mm": 0.4,
+                "within_output_tolerance": true
+              },
+              {
+                "variant_id": "V-FAST",
+                "serialized_offset_ms": 0,
+                "worst_case_error_mm": 0.2,
+                "limit_mm": 1,
+                "within_output_tolerance": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "lower_ms": {
+          "$rational": [
+            "0",
+            "1"
+          ]
+        },
+        "upper_ms": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "lower_inclusive": false,
+        "upper_inclusive": false,
+        "representative_ms": {
+          "$rational": [
+            "1",
+            "5"
+          ]
+        },
+        "decision_scope": "conditional_mathematics_only",
+        "feasible_target_policies": [
+          "shared",
+          "per_variant"
+        ],
+        "best_target_policy": "shared",
+        "target_cost_points": 2,
+        "effect": "reduce_established_cost",
+        "preview": {
+          "execution_status": "completed",
+          "hypothetical": true,
+          "decision_scope": "hypothetical_only",
+          "assumed_guaranteed_jitter_ms": {
+            "$rational": [
+              "1",
+              "5"
+            ]
+          },
+          "coverage": "One representative only; not proof for the whole region",
+          "error": null,
+          "target_selected_and_serialized": true,
+          "input_identity": "d902f155adb92082b600454fee1acfda7c89ad92f45118c4a79ef8b10ee4ef9a",
+          "assumption": {
+            "base_source_id": "CAM-D-R1",
+            "source_id": "CAM-D-R1--HYP-1",
+            "virtual_path": "scenario_sources/hypothesis-01.json",
+            "source_record": {
+              "source_id": "CAM-D-R1--HYP-1",
+              "kind": "camera",
+              "subject_id": "CAM-D",
+              "status": "active",
+              "revision": "hypothesis-1",
+              "supersedes": [
+                "CAM-D-R1"
+              ],
+              "data": {
+                "available": true,
+                "image_width_px": 2048,
+                "image_height_px": 1024,
+                "bytes_per_pixel": 1,
+                "max_fps": 60,
+                "power_W": 8,
+                "supply_range_V": [
+                  20,
+                  28
+                ],
+                "transport": "GigE-Vision",
+                "timestamp_bias_ms_by_variant": {
+                  "V-SLOW": 0,
+                  "V-FAST": 0
+                },
+                "timestamp_jitter_bound_ms": {
+                  "$rational": [
+                    "1",
+                    "5"
+                  ]
+                },
+                "migration_cost_points": 2,
+                "typical_timestamp_jitter_ms": {
+                  "$rational": [
+                    "1",
+                    "20"
+                  ]
+                }
+              },
+              "epistemic_kind": "hypothetical_assumption"
+            },
+            "field": "/data/timestamp_jitter_bound_ms",
+            "hypothetical_value_ms": {
+              "$rational": [
+                "1",
+                "5"
+              ]
+            },
+            "evidence_kind": "hypothetical_assumption",
+            "promoted_to_fact": false
+          },
+          "result": {
+            "decision_scope": "hypothetical_only",
+            "hypothetical": true,
+            "decision_status": "feasible_plan",
+            "selected_plan": {
+              "camera_id": "CAM-D",
+              "spec_source_id": "CAM-D-R1--HYP-1",
+              "policy": "shared",
+              "offset_ms_by_variant": {
+                "V-SLOW": 0,
+                "V-FAST": 0
+              },
+              "firmware_revision": "FW-1.0",
+              "cost_points": 2,
+              "optimality": "minimum_among_established_feasible_plans",
+              "unresolved_cheaper_candidates": [],
+              "requires_human_approval": true,
+              "deployment_qualified": false,
+              "hypothetical": true
+            },
+            "serialized_plan_checks": [
+              {
+                "variant_id": "V-SLOW",
+                "serialized_offset_ms": 0,
+                "worst_case_error_mm": 0.12,
+                "limit_mm": 0.4,
+                "within_output_tolerance": true
+              },
+              {
+                "variant_id": "V-FAST",
+                "serialized_offset_ms": 0,
+                "worst_case_error_mm": 0.6,
+                "limit_mm": 1,
+                "within_output_tolerance": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "lower_ms": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "upper_ms": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "lower_inclusive": true,
+        "upper_inclusive": true,
+        "representative_ms": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "decision_scope": "conditional_mathematics_only",
+        "feasible_target_policies": [
+          "shared",
+          "per_variant"
+        ],
+        "best_target_policy": "shared",
+        "target_cost_points": 2,
+        "effect": "reduce_established_cost",
+        "preview": {
+          "execution_status": "completed",
+          "hypothetical": true,
+          "decision_scope": "hypothetical_only",
+          "assumed_guaranteed_jitter_ms": {
+            "$rational": [
+              "2",
+              "5"
+            ]
+          },
+          "coverage": "One representative only; not proof for the whole region",
+          "error": null,
+          "target_selected_and_serialized": true,
+          "input_identity": "9e6a9b56c25d7b7768a8a36b14ea85efa53c0b389a43d5f82aca91ef4db70cac",
+          "assumption": {
+            "base_source_id": "CAM-D-R1",
+            "source_id": "CAM-D-R1--HYP-1",
+            "virtual_path": "scenario_sources/hypothesis-01.json",
+            "source_record": {
+              "source_id": "CAM-D-R1--HYP-1",
+              "kind": "camera",
+              "subject_id": "CAM-D",
+              "status": "active",
+              "revision": "hypothesis-1",
+              "supersedes": [
+                "CAM-D-R1"
+              ],
+              "data": {
+                "available": true,
+                "image_width_px": 2048,
+                "image_height_px": 1024,
+                "bytes_per_pixel": 1,
+                "max_fps": 60,
+                "power_W": 8,
+                "supply_range_V": [
+                  20,
+                  28
+                ],
+                "transport": "GigE-Vision",
+                "timestamp_bias_ms_by_variant": {
+                  "V-SLOW": 0,
+                  "V-FAST": 0
+                },
+                "timestamp_jitter_bound_ms": {
+                  "$rational": [
+                    "2",
+                    "5"
+                  ]
+                },
+                "migration_cost_points": 2,
+                "typical_timestamp_jitter_ms": {
+                  "$rational": [
+                    "1",
+                    "20"
+                  ]
+                }
+              },
+              "epistemic_kind": "hypothetical_assumption"
+            },
+            "field": "/data/timestamp_jitter_bound_ms",
+            "hypothetical_value_ms": {
+              "$rational": [
+                "2",
+                "5"
+              ]
+            },
+            "evidence_kind": "hypothetical_assumption",
+            "promoted_to_fact": false
+          },
+          "result": {
+            "decision_scope": "hypothetical_only",
+            "hypothetical": true,
+            "decision_status": "feasible_plan",
+            "selected_plan": {
+              "camera_id": "CAM-D",
+              "spec_source_id": "CAM-D-R1--HYP-1",
+              "policy": "shared",
+              "offset_ms_by_variant": {
+                "V-SLOW": 0,
+                "V-FAST": 0
+              },
+              "firmware_revision": "FW-1.0",
+              "cost_points": 2,
+              "optimality": "minimum_among_established_feasible_plans",
+              "unresolved_cheaper_candidates": [],
+              "requires_human_approval": true,
+              "deployment_qualified": false,
+              "hypothetical": true
+            },
+            "serialized_plan_checks": [
+              {
+                "variant_id": "V-SLOW",
+                "serialized_offset_ms": 0,
+                "worst_case_error_mm": 0.2,
+                "limit_mm": 0.4,
+                "within_output_tolerance": true
+              },
+              {
+                "variant_id": "V-FAST",
+                "serialized_offset_ms": 0,
+                "worst_case_error_mm": 1,
+                "limit_mm": 1,
+                "within_output_tolerance": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "lower_ms": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "upper_ms": null,
+        "lower_inclusive": false,
+        "upper_inclusive": false,
+        "representative_ms": {
+          "$rational": [
+            "7",
+            "5"
+          ]
+        },
+        "decision_scope": "conditional_mathematics_only",
+        "feasible_target_policies": [],
+        "best_target_policy": null,
+        "target_cost_points": null,
+        "effect": "no_target_plan",
+        "preview": {
+          "execution_status": "completed",
+          "hypothetical": true,
+          "decision_scope": "hypothetical_only",
+          "assumed_guaranteed_jitter_ms": {
+            "$rational": [
+              "7",
+              "5"
+            ]
+          },
+          "coverage": "One representative only; not proof for the whole region",
+          "error": null,
+          "target_selected_and_serialized": false,
+          "input_identity": "b72e7c0e7097375a64b767f483b92cc4b3e0a4ace0b0f8dceb36788618fdead5",
+          "assumption": {
+            "base_source_id": "CAM-D-R1",
+            "source_id": "CAM-D-R1--HYP-1",
+            "virtual_path": "scenario_sources/hypothesis-01.json",
+            "source_record": {
+              "source_id": "CAM-D-R1--HYP-1",
+              "kind": "camera",
+              "subject_id": "CAM-D",
+              "status": "active",
+              "revision": "hypothesis-1",
+              "supersedes": [
+                "CAM-D-R1"
+              ],
+              "data": {
+                "available": true,
+                "image_width_px": 2048,
+                "image_height_px": 1024,
+                "bytes_per_pixel": 1,
+                "max_fps": 60,
+                "power_W": 8,
+                "supply_range_V": [
+                  20,
+                  28
+                ],
+                "transport": "GigE-Vision",
+                "timestamp_bias_ms_by_variant": {
+                  "V-SLOW": 0,
+                  "V-FAST": 0
+                },
+                "timestamp_jitter_bound_ms": {
+                  "$rational": [
+                    "7",
+                    "5"
+                  ]
+                },
+                "migration_cost_points": 2,
+                "typical_timestamp_jitter_ms": {
+                  "$rational": [
+                    "1",
+                    "20"
+                  ]
+                }
+              },
+              "epistemic_kind": "hypothetical_assumption"
+            },
+            "field": "/data/timestamp_jitter_bound_ms",
+            "hypothetical_value_ms": {
+              "$rational": [
+                "7",
+                "5"
+              ]
+            },
+            "evidence_kind": "hypothetical_assumption",
+            "promoted_to_fact": false
+          },
+          "result": {
+            "decision_scope": "hypothetical_only",
+            "hypothetical": true,
+            "decision_status": "feasible_plan",
+            "selected_plan": {
+              "camera_id": "CAM-B",
+              "spec_source_id": "CAM-B-R2",
+              "policy": "per_variant",
+              "offset_ms_by_variant": {
+                "V-SLOW": -4,
+                "V-FAST": -2.5
+              },
+              "firmware_revision": "FW-1.0-PROPOSED-per_variant",
+              "cost_points": 5,
+              "optimality": "minimum_among_established_feasible_plans",
+              "unresolved_cheaper_candidates": [],
+              "requires_human_approval": true,
+              "deployment_qualified": false,
+              "hypothetical": true
+            },
+            "serialized_plan_checks": [
+              {
+                "variant_id": "V-SLOW",
+                "serialized_offset_ms": -4,
+                "worst_case_error_mm": 0.08,
+                "limit_mm": 0.4,
+                "within_output_tolerance": true
+              },
+              {
+                "variant_id": "V-FAST",
+                "serialized_offset_ms": -2.5,
+                "worst_case_error_mm": 0.4,
+                "limit_mm": 1,
+                "within_output_tolerance": true
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "derivation": [
+      {
+        "variant_id": "V-SLOW",
+        "speed_m_s": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "limit_mm": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "host_jitter_ms": {
+          "$rational": [
+            "1",
+            "10"
+          ]
+        },
+        "bias_ms": 0,
+        "supplied_variant_operating_conditions": {
+          "field_of_view_mm": 180,
+          "supply_voltage_V": 24,
+          "transport": "GigE-Vision",
+          "host_jitter_bound_ms": {
+            "$rational": [
+              "1",
+              "10"
+            ]
+          },
+          "required_fps": 20,
+          "max_mm_per_pixel": {
+            "$rational": [
+              "3",
+              "20"
+            ]
+          },
+          "link_capacity_MB_s": 90,
+          "power_budget_W": 12,
+          "speed_m_s": {
+            "$rational": [
+              "2",
+              "5"
+            ]
+          },
+          "max_registration_error_mm": {
+            "$rational": [
+              "2",
+              "5"
+            ]
+          }
+        },
+        "source_locators": [
+          {
+            "source_id": "CAM-D-R1",
+            "locator": "/data/timestamp_jitter_bound_ms",
+            "requested_locator": "/data/timestamp_jitter_bound_ms",
+            "field_present": true
+          },
+          {
+            "source_id": "CAM-D-R1",
+            "locator": "/data/timestamp_bias_ms_by_variant/V-SLOW",
+            "requested_locator": "/data/timestamp_bias_ms_by_variant/V-SLOW",
+            "field_present": true
+          },
+          {
+            "source_id": "REQ-SLOW",
+            "locator": "/data/speed_m_s",
+            "requested_locator": "/data/speed_m_s",
+            "field_present": true
+          },
+          {
+            "source_id": "REQ-SLOW",
+            "locator": "/data/max_registration_error_mm",
+            "requested_locator": "/data/max_registration_error_mm",
+            "field_present": true
+          },
+          {
+            "source_id": "REQ-SLOW",
+            "locator": "/data/host_jitter_bound_ms",
+            "requested_locator": "/data/host_jitter_bound_ms",
+            "field_present": true
+          }
+        ],
+        "a_ms": {
+          "$rational": [
+            "9",
+            "10"
+          ]
+        },
+        "zero_speed": false,
+        "lower_at_zero_ms": {
+          "$rational": [
+            "-9",
+            "10"
+          ]
+        },
+        "upper_at_zero_ms": {
+          "$rational": [
+            "9",
+            "10"
+          ]
+        }
+      },
+      {
+        "variant_id": "V-FAST",
+        "speed_m_s": {
+          "$rational": [
+            "2",
+            "1"
+          ]
+        },
+        "limit_mm": {
+          "$rational": [
+            "1",
+            "1"
+          ]
+        },
+        "host_jitter_ms": {
+          "$rational": [
+            "1",
+            "10"
+          ]
+        },
+        "bias_ms": 0,
+        "supplied_variant_operating_conditions": {
+          "field_of_view_mm": 180,
+          "supply_voltage_V": 24,
+          "transport": "GigE-Vision",
+          "host_jitter_bound_ms": {
+            "$rational": [
+              "1",
+              "10"
+            ]
+          },
+          "required_fps": 40,
+          "max_mm_per_pixel": {
+            "$rational": [
+              "1",
+              "10"
+            ]
+          },
+          "link_capacity_MB_s": 150,
+          "power_budget_W": 10,
+          "speed_m_s": {
+            "$rational": [
+              "2",
+              "1"
+            ]
+          },
+          "max_registration_error_mm": {
+            "$rational": [
+              "1",
+              "1"
+            ]
+          }
+        },
+        "source_locators": [
+          {
+            "source_id": "CAM-D-R1",
+            "locator": "/data/timestamp_jitter_bound_ms",
+            "requested_locator": "/data/timestamp_jitter_bound_ms",
+            "field_present": true
+          },
+          {
+            "source_id": "CAM-D-R1",
+            "locator": "/data/timestamp_bias_ms_by_variant/V-FAST",
+            "requested_locator": "/data/timestamp_bias_ms_by_variant/V-FAST",
+            "field_present": true
+          },
+          {
+            "source_id": "REQ-FAST",
+            "locator": "/data/speed_m_s",
+            "requested_locator": "/data/speed_m_s",
+            "field_present": true
+          },
+          {
+            "source_id": "REQ-FAST",
+            "locator": "/data/max_registration_error_mm",
+            "requested_locator": "/data/max_registration_error_mm",
+            "field_present": true
+          },
+          {
+            "source_id": "REQ-FAST",
+            "locator": "/data/host_jitter_bound_ms",
+            "requested_locator": "/data/host_jitter_bound_ms",
+            "field_present": true
+          }
+        ],
+        "a_ms": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        },
+        "zero_speed": false,
+        "lower_at_zero_ms": {
+          "$rational": [
+            "-2",
+            "5"
+          ]
+        },
+        "upper_at_zero_ms": {
+          "$rational": [
+            "2",
+            "5"
+          ]
+        }
+      }
+    ],
+    "evidence_request": {
+      "field": "timestamp_jitter_bound_ms",
+      "source_id": "CAM-D-R1",
+      "locator": "/data/timestamp_jitter_bound_ms",
+      "units": "ms",
+      "evidence_standard": "Applicable guaranteed upper bound; a typical value, finite sample or PASS is insufficient",
+      "operating_conditions": [
+        {
+          "variant_id": "V-SLOW",
+          "speed_m_s": {
+            "$rational": [
+              "2",
+              "5"
+            ]
+          },
+          "limit_mm": {
+            "$rational": [
+              "2",
+              "5"
+            ]
+          },
+          "host_jitter_ms": {
+            "$rational": [
+              "1",
+              "10"
+            ]
+          },
+          "bias_ms": 0,
+          "supplied_variant_operating_conditions": {
+            "field_of_view_mm": 180,
+            "supply_voltage_V": 24,
+            "transport": "GigE-Vision",
+            "host_jitter_bound_ms": {
+              "$rational": [
+                "1",
+                "10"
+              ]
+            },
+            "required_fps": 20,
+            "max_mm_per_pixel": {
+              "$rational": [
+                "3",
+                "20"
+              ]
+            },
+            "link_capacity_MB_s": 90,
+            "power_budget_W": 12,
+            "speed_m_s": {
+              "$rational": [
+                "2",
+                "5"
+              ]
+            },
+            "max_registration_error_mm": {
+              "$rational": [
+                "2",
+                "5"
+              ]
+            }
+          },
+          "source_locators": [
+            {
+              "source_id": "CAM-D-R1",
+              "locator": "/data/timestamp_jitter_bound_ms",
+              "requested_locator": "/data/timestamp_jitter_bound_ms",
+              "field_present": true
+            },
+            {
+              "source_id": "CAM-D-R1",
+              "locator": "/data/timestamp_bias_ms_by_variant/V-SLOW",
+              "requested_locator": "/data/timestamp_bias_ms_by_variant/V-SLOW",
+              "field_present": true
+            },
+            {
+              "source_id": "REQ-SLOW",
+              "locator": "/data/speed_m_s",
+              "requested_locator": "/data/speed_m_s",
+              "field_present": true
+            },
+            {
+              "source_id": "REQ-SLOW",
+              "locator": "/data/max_registration_error_mm",
+              "requested_locator": "/data/max_registration_error_mm",
+              "field_present": true
+            },
+            {
+              "source_id": "REQ-SLOW",
+              "locator": "/data/host_jitter_bound_ms",
+              "requested_locator": "/data/host_jitter_bound_ms",
+              "field_present": true
+            }
+          ],
+          "a_ms": {
+            "$rational": [
+              "9",
+              "10"
+            ]
+          },
+          "zero_speed": false,
+          "lower_at_zero_ms": {
+            "$rational": [
+              "-9",
+              "10"
+            ]
+          },
+          "upper_at_zero_ms": {
+            "$rational": [
+              "9",
+              "10"
+            ]
+          }
+        },
+        {
+          "variant_id": "V-FAST",
+          "speed_m_s": {
+            "$rational": [
+              "2",
+              "1"
+            ]
+          },
+          "limit_mm": {
+            "$rational": [
+              "1",
+              "1"
+            ]
+          },
+          "host_jitter_ms": {
+            "$rational": [
+              "1",
+              "10"
+            ]
+          },
+          "bias_ms": 0,
+          "supplied_variant_operating_conditions": {
+            "field_of_view_mm": 180,
+            "supply_voltage_V": 24,
+            "transport": "GigE-Vision",
+            "host_jitter_bound_ms": {
+              "$rational": [
+                "1",
+                "10"
+              ]
+            },
+            "required_fps": 40,
+            "max_mm_per_pixel": {
+              "$rational": [
+                "1",
+                "10"
+              ]
+            },
+            "link_capacity_MB_s": 150,
+            "power_budget_W": 10,
+            "speed_m_s": {
+              "$rational": [
+                "2",
+                "1"
+              ]
+            },
+            "max_registration_error_mm": {
+              "$rational": [
+                "1",
+                "1"
+              ]
+            }
+          },
+          "source_locators": [
+            {
+              "source_id": "CAM-D-R1",
+              "locator": "/data/timestamp_jitter_bound_ms",
+              "requested_locator": "/data/timestamp_jitter_bound_ms",
+              "field_present": true
+            },
+            {
+              "source_id": "CAM-D-R1",
+              "locator": "/data/timestamp_bias_ms_by_variant/V-FAST",
+              "requested_locator": "/data/timestamp_bias_ms_by_variant/V-FAST",
+              "field_present": true
+            },
+            {
+              "source_id": "REQ-FAST",
+              "locator": "/data/speed_m_s",
+              "requested_locator": "/data/speed_m_s",
+              "field_present": true
+            },
+            {
+              "source_id": "REQ-FAST",
+              "locator": "/data/max_registration_error_mm",
+              "requested_locator": "/data/max_registration_error_mm",
+              "field_present": true
+            },
+            {
+              "source_id": "REQ-FAST",
+              "locator": "/data/host_jitter_bound_ms",
+              "requested_locator": "/data/host_jitter_bound_ms",
+              "field_present": true
+            }
+          ],
+          "a_ms": {
+            "$rational": [
+              "2",
+              "5"
+            ]
+          },
+          "zero_speed": false,
+          "lower_at_zero_ms": {
+            "$rational": [
+              "-2",
+              "5"
+            ]
+          },
+          "upper_at_zero_ms": {
+            "$rational": [
+              "2",
+              "5"
+            ]
+          }
+        }
+      ],
+      "source_requirements": "Traceable authoritative specification for the exact candidate/spec revision and relevant conditions; retain provenance and explicit supersession if revised. Source authenticity remains externally reviewed.",
+      "text": "Obtain an applicable guaranteed upper bound in ms for CAM-D (CAM-D-R1), covering every listed variant operating condition. Compare it with the exact policy domains above. A typical value, finite observations or a PASS statement will not establish this guarantee. Preserve the specification revision, provenance and any explicit supersession; then rerun the ordinary solver and its finite-encoding checks."
+    },
+    "executable_configuration_promised": false,
+    "deployment_qualified": false,
+    "human_approval_recorded": false,
+    "rule_ids": [
+      "R-AUTH",
+      "R-U01",
+      "R-TIME",
+      "R-SELECT",
+      "R-SERIAL",
+      "R-EVIDENCE",
+      "R-SIM"
+    ],
+    "limitations": [
+      "Synthetic model only; facts are supplied, not independently authenticated.",
+      "Cost comparison covers established plans only; unresolved other candidates can still matter.",
+      "Representative previews are hypothetical witnesses, not a proof of encoding over a whole region."
+    ],
+    "explanation": "Candidate: CAM-D. Current decision: feasible_plan.\n\nAnalysis: supported.\n\nshared: 0 <= guaranteed jitter <= 2/5 ms, inclusive; cost 2 synthetic points; if feasible: reduce established cost.\n\nper_variant: 0 <= guaranteed jitter <= 2/5 ms, inclusive; cost 5 synthetic points; if feasible: add equal cost alternative.\n\nj = 0 ms: reduce established cost; best target policy shared, 2 points. Conditional mathematics only.\n\n0 < j < 2/5 ms: reduce established cost; best target policy shared, 2 points. Conditional mathematics only.\n\nj = 2/5 ms: reduce established cost; best target policy shared, 2 points. Conditional mathematics only.\n\n2/5 < j ms: no target plan. Conditional mathematics only.\n\nAsk: Obtain an applicable guaranteed upper bound in ms for CAM-D (CAM-D-R1), covering every listed variant operating condition. Compare it with the exact policy domains above. A typical value, finite observations or a PASS statement will not establish this guarantee. Preserve the specification revision, provenance and any explicit supersession; then rerun the ordinary solver and its finite-encoding checks.\n\nSynthetic model only; facts are supplied, not independently authenticated.\n\nCost comparison covers established plans only; unresolved other candidates can still matter.\n\nRepresentative previews are hypothetical witnesses, not a proof of encoding over a whole region.\n\nMathematical conditions are not a guaranteed executable configuration. No supplier fact, deployment approval, or hardware qualification was created."
+  },
+  "integration": {
+    "application": "Higgs Camera Change Review",
+    "version": "0.3.0-rc.1",
+    "method_origin": "Higgs Python CogniMap 0.1.2",
+    "case_id": "PUBLIC-01",
+    "source_sha256": {
+      "case.json": "fbe40ec2e71c93df0de158bdbb310fb28209387a5ae7fd18d8235d2c427701ec",
+      "sources/REQ-SLOW.json": "2b51bf1964268d89456e2a0fd87f060b46c222b5b23bdd454c04334e67068ead",
+      "sources/REQ-FAST.json": "1261be68c14b519cd7bc0251f1ed22c637f47e2b1c0790018a25ee127ddec8c4",
+      "sources/CAM-A-R1.json": "51b3f7bd560fffb87f21b33b2ce8b44ae33577b26967ef7ccc2aa117dc2294eb",
+      "sources/CAM-B-R1.json": "fbcc361f08ad310d58a485450c004db3e42db57a46403ddad3c88a7507cce199",
+      "sources/CAM-B-R2.json": "9e7d20b4db8a25aa3a34d1ebd49239761176ed96fc4dcd88ec4bd075be53a75f",
+      "sources/CAM-C-R1.json": "46f349348f46532bf7b5a798bd2486bc21fed6176fbf88911ad16bd7339883ca",
+      "sources/CAM-D-R1.json": "b97ddd132cba67aff45c282c2d46280958f9fef11c08b7eacec938641dd02eb2",
+      "sources/FW-BASE.json": "871e3dee5d44257793967ad9c00736bc3bf8e685422561b55416a7ded99d4b88",
+      "sources/CONFIG-BASE.json": "96dfa9a1756063e9a29db93104e4206e1fbf451ce68dfe726991e17f7b331af9",
+      "sources/TEST-A-SLOW.json": "13e347eb36d96fa75aa340f94978c702f59750a2ed44066b36b501a3a9404137",
+      "sources/TEST-A-FAST.json": "f5593588e3d4c494d1044dc237c652b9b21352b32f87ae2ea884e8e66811b0dc",
+      "sources/TEST-B-FAST.json": "a401d6a4fb73cbdf6960ea2db4a9031052815f3206347f5eaab31782e971e141",
+      "sources/TEST-D-SAMPLE.json": "8d464d0f337eb87aa952f0851c018ab644001fb9a024a8aca6a5968926c05115",
+      "sources/DEC-APPROVAL.json": "689476b8d32c370969fb728b90ff88ef823b217698c7bb84a4289e5caba7051e",
+      "sources/GRAPH-BASE.json": "619a7ee75b22aa4e0ddc6023fc92a7b36dc579a0235fa27b59e6b31168e57e25"
+    },
+    "snapshot_kind": "one loaded case; no nested disk reads"
+  }
+}

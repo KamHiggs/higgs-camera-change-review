@@ -15,3 +15,14 @@ These are scope boundaries, not a promise of production readiness.
 - macOS and the installed Python versions in VALIDATION.md are the actual check environments. Linux and Windows are untested here. Full tests require symlink creation support.
 
 The frozen historical build retains its original failures, repair records and limitations. The prior candidate changed packaging and runners only. This portfolio release changes documentation and licensing only; neither revises the experiment or repairs U01.
+
+
+## Evidence-question integration limits — 0.3.0-rc.1
+
+Only one missing guaranteed camera-jitter bound is analyzed. Additional required unknowns may prevent a sufficient request; general optimal evidence acquisition is not implemented. The target must belong to the supplied candidate set. No embedded demonstration fallback is possible.
+
+The current decision and witnesses share a loaded snapshot. Source bytes are hashed as parsed and rechecked after loading, but this is not an OS transaction or a guarantee against hostile concurrent modification. Separate command runs may capture different revisions.
+
+Thresholds/domains are exact rational mathematics; representative hypothetical witnesses are not a proof of serialization over the entire domain. Existing U01 may withhold an option for a descriptive-only source conflict. No new deployment approval or supplier guarantee authentication is introduced.
+
+The new CLI is verified only on the recorded macOS/Python environment. It is a trusted local program, not an untrusted-code execution sandbox. The combined integration is author-tested, not independently approved.
