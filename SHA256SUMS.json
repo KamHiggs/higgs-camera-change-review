@@ -11,7 +11,7 @@
     "LICENSE": "c17104351cc22a69778d7f0fccbdba33f29a4a5046f9d64eecb7a215eaa8d98e",
     "LICENSE_STATUS.md": "7ac14f52a0ea9ef6ab23c5d26b94eb0674e2cf91708f2cd16b0d7a3611f91f84",
     "PROVENANCE.json": "ca7d0f68158482451c9bece2b0f2edc95f78476e7e34523cd3c499d04bc8a458",
-    "README.md": "db194e360e04d23eb4796b16f1691929ad5ccdd4eac6e8f43a29ab96a3bd2ccf",
+    "README.md": "41b3e818da04e0a5796f96e5dcda0cbf6e02f28412f9c0087f9ffa9f49a69c4b",
     "RELEASE.json": "ddc858577928c4ab67ad50653e5ce4e1835e930b28950ac2bb355ab9161a1ada",
     "VERSION": "c6f1f41e81a29cbf7b53a44c3116aa6c922bdb58fe779c68d475f46935179318",
     "app.py": "b042d9a72ac3d25310afb4567eb4357fd90ece561215f22999315705a15c5610",
@@ -19,6 +19,7 @@
     "docs/INPUT_PREPARATION.md": "21ee6791dcef126f3d7b015364bf3681caa0ff2d972502ce9a9e267df241b2d2",
     "docs/INTERFACE.md": "f88916481aa14905b96156d9b20b3a24644929686354ed707c486b486494d00e",
     "docs/KNOWN_LIMITATIONS.md": "c30d1769e406f6e2e67b9a04240678e277045a2614fb440a2b2446881b910133",
+    "docs/REVIEW_STATUS.md": "cb34c3cea4841129649de38f6bf11227e329937626060625255dbe9a5dc0429f",
     "docs/VALIDATION.md": "2d6d86561b9351a24af13a55d52ccc65380cf2de1fa8f80fac33bcad050f5296",
     "docs/WORLD_CONTRACT.md": "742922231f2b2f4a3db51eae09f90cfcda3f786aee3acebf718317df3f7e8e22",
     "docs/example_review.html": "7864930baf67bbd9eb8f6b82e30fb81acb2756055c20625d164ff4feb4c7020c",
@@ -185,5 +186,6 @@
     "tests/fixtures/zero_radius/sources/TEST-A-SLOW.json": "13e347eb36d96fa75aa340f94978c702f59750a2ed44066b36b501a3a9404137",
     "tests/fixtures/zero_radius/sources/TEST-B-FAST.json": "a401d6a4fb73cbdf6960ea2db4a9031052815f3206347f5eaab31782e971e141",
     "tests/fixtures/zero_radius/sources/TEST-D-SAMPLE.json": "8d464d0f337eb87aa952f0851c018ab644001fb9a024a8aca6a5968926c05115"
-  }
+  },
+  "scope": "Documentation-updated main tree retaining the v0.2.1 application; not the byte-identical historical release payload. Tagged release manifests and assets are unchanged."
 }
