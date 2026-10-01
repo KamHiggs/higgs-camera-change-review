@@ -4,6 +4,14 @@ An offline engineering-change assistant demonstrated through a synthetic industr
 
 **Created and led by Kamden Higgs.** An experimental Higgs AI project developed through AI-assisted implementation and adversarial review.
 
+## InvenTree integration demonstration
+
+**When the inputs change, know which decisions need revisiting.** The experimental InvenTree integration preserves a camera assessment, flags it when relevant inventory declarations change, and exports a record that can be rechecked offline with its matching verifier.
+
+Start with the [recorded three-screen walkthrough](https://github.com/KamHiggs/higgs-camera-change-review/blob/inventree-v0.1.3-correction.1/docs/DEMONSTRATION.md), the [integration source and installation guide](https://github.com/KamHiggs/higgs-camera-change-review/tree/inventree-v0.1.3-correction.1), or the [experimental integration release](https://github.com/KamHiggs/higgs-camera-change-review/releases/tag/inventree-v0.1.3-correction.1). This is a separate `0.1.3+correction.1` integration lineage; the standalone camera versions below are unchanged.
+
+The demonstrated verification accepts the exported record while its camera recommendation remains blocked. Synthetic requirements, manual setup, nonblind review and known limitations remain; see [integration review status](https://github.com/KamHiggs/higgs-camera-change-review/blob/inventree-v0.1.3-correction.1/docs/REVIEW_STATUS.md). No hosted interactive service or hardware approval is claimed.
+
 ## Choose the version
 
 - **Default branch (`main`):** the retained v0.2.1 application, with subsequent documentation updates. A normal default-branch clone does **not** include `questions`.
