@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "higgs-inventree-camera-review"
+version = "0.1.3+correction.1"
+description = "Experimental evidence-aware camera review for a synthetic installation"
+requires-python = ">=3.12"
+authors = [{name = "Kamden Higgs"}]
+license = {text = "MIT (proposed for new integration code; see LICENSE_REVIEW.md)"}
+
+[project.entry-points."inventree_plugins"]
+higgs_camera_review = "higgs_camera_review.plugin:HiggsCameraReview"
+
+[tool.setuptools.packages.find]
+include = ["higgs_camera_review*"]
+
+[tool.setuptools.package-data]
+higgs_camera_review = ["data/*.zip", "data/*.json", "static/*.js", "templates/higgs_camera_review/*"]

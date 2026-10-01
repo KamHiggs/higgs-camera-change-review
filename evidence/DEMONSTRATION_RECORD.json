@@ -1,0 +1,139 @@
+{
+  "record_type": "PUBLIC_DEMONSTRATION_PROJECTION",
+  "source_receipt_sha256": "ad7cc70f427d05b6b7bb7591181287bf958311882f7c8f65a6587a46a34c4694",
+  "projection_notice": "Selected fields and normalized public locators; not the original execution receipt or a new run.",
+  "executed_by": "Claude (Opus 5.5)",
+  "recorded_utc": "2026-09-30T23:10:33+00:00",
+  "build": {
+    "distribution": "0.1.3+correction.1",
+    "software_sha256": "4450e1fec729cc8c34ef4b0a71005eb35d267c5a4f2bf4aa40f5aa21ea3c5e9b",
+    "wheel_sha256": "a065bf22182f61f8263667290e6f49999c2ebb7effa32ab9ff1f9e31b3c6a66a"
+  },
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.14",
+    "inventree": "1.5.6",
+    "installation": "fresh isolated venv; 154 pre-existing pinned wheels installed offline",
+    "database": "copied synthetic demo database; not freshly seeded",
+    "account": "local superuser",
+    "capture": "scripted headless Chrome via existing Playwright; authentic screenshots, no video"
+  },
+  "declarations": {
+    "copied_db_initial_isp": "true",
+    "setup_change": {
+      "part_id": 2,
+      "before": "true",
+      "after": "false",
+      "meaning": "Synthetic operating declaration changed; no camera hardware action"
+    },
+    "demo_change": {
+      "part_id": 2,
+      "before": "false",
+      "after": "true",
+      "meaning": "Synthetic operating declaration changed; no camera hardware action"
+    }
+  },
+  "assessments": {
+    "first": {
+      "id": "62095589c021488b94fc6d0d78c4897d",
+      "status": "CONDITIONAL_EVIDENCE_QUESTION",
+      "manifest_sha256": "d9fdf4f184065eaaaee594ba628e13c89cde436063aee457de5447121b9bb123",
+      "export": {
+        "zip_sha256": "c36b2d16907ad405b8b99096b76f6a08cc84b7e70d098146c85c9dcaf2ccd9bf",
+        "zip_bytes": 270548,
+        "members": 54,
+        "zip_top_folder": null,
+        "assessment_manifest_sha256": "d9fdf4f184065eaaaee594ba628e13c89cde436063aee457de5447121b9bb123",
+        "assessment_id": "62095589c021488b94fc6d0d78c4897d",
+        "engineering_status": "CONDITIONAL_EVIDENCE_QUESTION",
+        "declared_isp": "false",
+        "integration_source_sha256": "4450e1fec729cc8c34ef4b0a71005eb35d267c5a4f2bf4aa40f5aa21ea3c5e9b"
+      }
+    },
+    "stale_check": {
+      "freshness": "STALE_ANALYSIS",
+      "changes": "DECISION_INPUT_CHANGE \u00b7 /parameters/isp_enabled/raw_value: \"false\" \u2192 \"true\"",
+      "reopened_same_manifest": true
+    },
+    "second": {
+      "id": "935f9c94bada46f48ee762e0776307a8",
+      "status": "ESTABLISHED_BLOCKER",
+      "manifest_sha256": "db00600691c283ad8e702bcb2dbfa3f1ab6ac0d7de598be7722bddaeb2d72776",
+      "frame_rate_and_throughput": [
+        {
+          "variant": "LINE-FAST",
+          "frame_rate": {
+            "status": "fail",
+            "value": 24,
+            "limit": 45,
+            "comparison": ">="
+          },
+          "throughput": {
+            "status": "pass",
+            "value": 225.60768,
+            "limit": 300,
+            "comparison": "<="
+          }
+        },
+        {
+          "variant": "LINE-SLOW",
+          "frame_rate": {
+            "status": "fail",
+            "value": 24,
+            "limit": 30,
+            "comparison": ">="
+          },
+          "throughput": {
+            "status": "pass",
+            "value": 150.40512,
+            "limit": 300,
+            "comparison": "<="
+          }
+        }
+      ],
+      "export": {
+        "zip_sha256": "75dfcec7626cf379196d3f7ff4a682b3d1e741da332371dd7df8702ffa56a7dc",
+        "zip_bytes": 254514,
+        "members": 54,
+        "zip_top_folder": null,
+        "assessment_manifest_sha256": "db00600691c283ad8e702bcb2dbfa3f1ab6ac0d7de598be7722bddaeb2d72776",
+        "assessment_id": "935f9c94bada46f48ee762e0776307a8",
+        "engineering_status": "ESTABLISHED_BLOCKER",
+        "declared_isp": "true",
+        "integration_source_sha256": "4450e1fec729cc8c34ef4b0a71005eb35d267c5a4f2bf4aa40f5aa21ea3c5e9b"
+      }
+    }
+  },
+  "recorded_verification": {
+    "export": "examples/exports/second-assessment-isp-on.zip",
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "historical_verification": {
+      "authenticated_creation_time": false,
+      "contract": "HIGGS-RECORDED-DECISION-0.1.3",
+      "executing_verifier_version": "0.1.3",
+      "historical_verifier_archive_sha256": null,
+      "status": "VERIFIED_RECORDED_DECISION"
+    },
+    "recipient_requirement": {
+      "contract": "HIGGS-RECORDED-DECISION-0.1.3",
+      "origin": "CLI argument (external to assessment)",
+      "policy_id": "HIGGS-ASSURANCE-POLICY-0.1.3"
+    },
+    "acceptance": {
+      "code": "REQUIRED_ASSURANCE_MET",
+      "meaning": "Assurance-policy result only; not deployment approval, source truth or physical compatibility",
+      "status": "ACCEPTED"
+    },
+    "preserved_receipt": "evidence/recorded-verification/VERIFICATION_RESULT.json",
+    "receipt_sha256": "76d4965c61c22d1396bba0a55d174a80494251b92f6f571b0b5ecbd49a7ae223"
+  },
+  "not_exercised": [
+    "verification of the first (conditional) export",
+    "in-host verification buttons",
+    "other cameras",
+    "evidence detail expanders"
+  ],
+  "services_reported_stopped": true,
+  "scope": "Synthetic software demonstration, not hardware qualification, source authentication, deployment approval, customer validation or independent approval."
+}

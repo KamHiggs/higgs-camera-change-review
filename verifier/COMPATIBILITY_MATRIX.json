@@ -1,0 +1,81 @@
+{
+  "policy_id": "HIGGS-ASSURANCE-POLICY-0.1.3",
+  "contracts": [
+    "HIGGS-ENGINE-OUTPUT-1",
+    "HIGGS-RECORDED-DECISION-0.1.1",
+    "HIGGS-RECORDED-DECISION-0.1.2",
+    "HIGGS-RECORDED-DECISION-0.1.3"
+  ],
+  "satisfies": {
+    "HIGGS-ENGINE-OUTPUT-1": [
+      "HIGGS-ENGINE-OUTPUT-1"
+    ],
+    "HIGGS-RECORDED-DECISION-0.1.1": [
+      "HIGGS-ENGINE-OUTPUT-1",
+      "HIGGS-RECORDED-DECISION-0.1.1"
+    ],
+    "HIGGS-RECORDED-DECISION-0.1.2": [
+      "HIGGS-ENGINE-OUTPUT-1",
+      "HIGGS-RECORDED-DECISION-0.1.1",
+      "HIGGS-RECORDED-DECISION-0.1.2"
+    ],
+    "HIGGS-RECORDED-DECISION-0.1.3": [
+      "HIGGS-ENGINE-OUTPUT-1",
+      "HIGGS-RECORDED-DECISION-0.1.1",
+      "HIGGS-RECORDED-DECISION-0.1.2",
+      "HIGGS-RECORDED-DECISION-0.1.3"
+    ]
+  },
+  "rationale": "Explicit adopted guarantee inclusion, not version-number comparison. Decision contracts include engine reproduction. D012 adds format permission and deterministic human summary; D013 retains those semantics with bounded parsing and external acceptance. No physical or source truth is implied.",
+  "formats": {
+    "0.1.0": {
+      "executor": "0.1.1",
+      "archive_sha256": "96f99c16314a57e7c1eb6c6e769e3cae7af2e0cb4081b5423eb23e3554b6bfb6",
+      "engine_contract": "HIGGS-ENGINE-OUTPUT-1",
+      "decision_contract": null,
+      "summary_checked": false,
+      "format_guarantee": false
+    },
+    "0.1.1": {
+      "executor": "0.1.1",
+      "archive_sha256": "96f99c16314a57e7c1eb6c6e769e3cae7af2e0cb4081b5423eb23e3554b6bfb6",
+      "engine_contract": "HIGGS-ENGINE-OUTPUT-1",
+      "decision_contract": "HIGGS-RECORDED-DECISION-0.1.1",
+      "summary_checked": false,
+      "format_guarantee": false
+    },
+    "0.1.2": {
+      "executor": "0.1.2",
+      "archive_sha256": "ef322e698e0c4c7f283f98b0136877cf1926f2504210beae88b36c6ceb310b69",
+      "engine_contract": "HIGGS-ENGINE-OUTPUT-1",
+      "decision_contract": "HIGGS-RECORDED-DECISION-0.1.2",
+      "summary_checked": true,
+      "format_guarantee": true
+    },
+    "0.1.3": {
+      "executor": "0.1.3",
+      "archive_sha256": null,
+      "identity_binding": "Final standalone verifier distribution and software digest; no future bytes are pretended frozen now",
+      "engine_contract": "HIGGS-ENGINE-OUTPUT-1",
+      "decision_contract": "HIGGS-RECORDED-DECISION-0.1.3",
+      "summary_checked": true,
+      "format_guarantee": true
+    }
+  },
+  "host": {
+    "operator_env": "HIGGS_REQUIRED_ASSURANCE",
+    "default": "HIGGS-RECORDED-DECISION-0.1.3",
+    "request_policy": "If supplied, requirement must explicitly satisfy operator minimum; no lower override"
+  },
+  "cli": {
+    "omitted_requirement": "Historical verification allowed, acceptance NOT_EVALUATED, exit 5",
+    "exit_codes": {
+      "0": "accepted and requested verification level met",
+      "1": "verification or storage failure",
+      "3": "requested decision verification unavailable; only engine reproduced",
+      "4": "verification met requested level but recipient assurance unmet",
+      "5": "verification met requested level but no recipient requirement supplied",
+      "6": "unsupported recipient requirement"
+    }
+  }
+}

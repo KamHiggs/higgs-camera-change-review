@@ -1,0 +1,105 @@
+{
+  "format": "higgs-runtime-pins-v1",
+  "original_archive_sha256": "d23cd87f6d842ceb850eba865bf1b19ce120a5185ccb58634dbdc622e05f78ee",
+  "subset_sha256": "6a9ebaf312febd9f6581304f29290dfc0a6ab3cfa43b4c9e71d17d518b4104ae",
+  "original_manifest_sha256": "c6cf090c1092634573d8e45579b09e92b1a4f0a506137e47f4d0636a0f4e8786",
+  "required_members": {
+    "LIMITATIONS.md": {
+      "sha256": "5753abd52b37e49e83bc031ca66697cbc31859af9857262cab392475025f187f",
+      "bytes": 4165
+    },
+    "docs/BOUNDED_ADAPTER_CONTRACT.md": {
+      "sha256": "af444da1f22d5d2a21d207462358c48cc408260740265de6d3cdc6d4fcdea840",
+      "bytes": 5530
+    },
+    "evidence/EVIDENCE_LEDGER.json": {
+      "sha256": "92d249108babaab7b4b7fe115db07be8236229dd61c558521bc1af66f767174d",
+      "bytes": 107125
+    },
+    "evidence/SOURCE_CAPTURES.json": {
+      "sha256": "789c5008e470ee1f5afa7b91b06dd85a78e4ec48d509e5681442ae43ebdb3671",
+      "bytes": 63281
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/ATTRIBUTION.md": {
+      "sha256": "d1910e95a14989f42ba97c96f592e8170f06a06974bfb156e4311db996a68743",
+      "bytes": 3871
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/LICENSE": {
+      "sha256": "c17104351cc22a69778d7f0fccbdba33f29a4a5046f9d64eecb7a215eaa8d98e",
+      "bytes": 1069
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/app.py": {
+      "sha256": "b244624991156a4a716bbcfeb623785a3ba1ed8211d8379b9f0c04265bff1568",
+      "bytes": 3110
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/camera_cognimap.py": {
+      "sha256": "4ecb76775690c969c5b17f913a3ae8bad6f64731897f46c67794549017140e22",
+      "bytes": 15772
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/camera_runtime.py": {
+      "sha256": "284200992cd363d1ec004d07f0e37b5f1bd6ca910ccc2e4dbaa6f329f0f17945",
+      "bytes": 2023
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/decision_questions.py": {
+      "sha256": "2bc95f8d1eb97af5bb0d68fd8cf04a1dc5e13e09360f3f7a7905585335152caf",
+      "bytes": 15703
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/engine.py": {
+      "sha256": "a01d44fcf2ed4da8901a76888609a26b00ee66704ffd7212d9b1ad6be5ae9def",
+      "bytes": 22382
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/questions_cli.py": {
+      "sha256": "10a94ce2fca5a91ae41b873bb27c3689c1a2e2bb280d1d1aa8305e38005a3edb",
+      "bytes": 6309
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/reporting.py": {
+      "sha256": "60def1707ed053e9de64949dcc2f102bdf16156858df6a233e396f3f8917547f",
+      "bytes": 5412
+    },
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/sources.py": {
+      "sha256": "5bb6845c9817618977e1d9e5fce47aa5bf30bad0a6c080e1aca43854a2014c96",
+      "bytes": 11279
+    },
+    "scenarios/A_compatible.json": {
+      "sha256": "2a9ce45cbd52ee986cded9bf4e4432fe77728539c8923c7fa8b04c960aa614f3",
+      "bytes": 1051
+    },
+    "scenarios/B_slow.json": {
+      "sha256": "1aefd10671c814ac6bab614615338d21de386f418d80870f00d2236b6481cbc1",
+      "bytes": 1044
+    },
+    "scenarios/C_unknown.json": {
+      "sha256": "4e6ca21f10841c4761b29ce4644b8b6e06b807422db26f6a8c196e85fc8562ab",
+      "bytes": 1047
+    },
+    "tools/applicability_gate.py": {
+      "sha256": "a70c0707aad3d6c0e45096ce82890f27625e5ec5decc59a903804569da3a9314",
+      "bytes": 6493
+    },
+    "tools/bounded_adapter.py": {
+      "sha256": "c0a1ed72e9a28d59d8c3d0b66ba87d835d59ea9bc1402be043ff5460edd3470e",
+      "bytes": 5284
+    },
+    "tools/common.py": {
+      "sha256": "b2af627ebb0614ad743400b89f9b8de512cf5feef85bc0a3e23062ebcb6ffd7e",
+      "bytes": 4565
+    },
+    "tools/ledger.py": {
+      "sha256": "e66fe027a1c5731295e0c81040e078a56be7638db3ed95b6df07cb16867e9f49",
+      "bytes": 13286
+    },
+    "tools/materialize_case.py": {
+      "sha256": "8ffb1337dbd985e4706aef824deb7e1ab9c4d1543f21b244e848232455ff4766",
+      "bytes": 2689
+    },
+    "tools/run_experiment.py": {
+      "sha256": "d73018b716d4720b47a6618ef3f5b73b8acb314cf673d5a7d8324a61d8620a2b",
+      "bytes": 4399
+    },
+    "tools/self_check.py": {
+      "sha256": "a6e91d44a6322fc5b52e49f34539a209df75682c4c45f571607008d7375db7a3",
+      "bytes": 1931
+    }
+  },
+  "origin": "Derived before correction code from verified frozen v0.1.0 bundled subset and pinned original manifest; verifier-owned, never assessment-owned."
+}

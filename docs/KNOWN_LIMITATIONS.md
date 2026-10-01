@@ -1,17 +1,14 @@
-# Known limitations — first experimental release
+# Known limitations
 
-These are scope boundaries, not a promise of production readiness.
+- **Stored float-overflow opening error:** `1e999` in a stored `summary.json` can parse to infinity and produce an unstructured HTTP 500 during response rendering. This remains unfixed. It is not a claim that arbitrary malformed inputs are handled safely. Do not use this prototype as a public untrusted-input service.
+- **Exact-build verification:** original v0.1.3 and `0.1.3+correction.1` share a protocol label but different source identities. Each needs its matching verifier. Host upgrades can refuse older assessments with `CONTRACT_IDENTITY`; there is no automatic same-protocol build migration.
+- **Version labels:** distribution `0.1.3+correction.1`, UI/protocol `0.1.3`, inherited module `__version__` `0.1.2`. Preserve exact hashes rather than treating a display label as identity. Historical license metadata says proposed; current MIT adoption is documented separately.
+- **Fixed model:** the installation, timing assumptions, test records and costs are synthetic. Inventory fields are declarations. Source captures retain manufacturer qualifiers; neither a hash nor replay proves physical identity, manufacturer truth or applicability to a real installation. Voltage and omitted physics remain out of scope.
+- **Manual setup:** explicit bindings, no OCR, generalized unit conversion, automatic source admission, hardware discovery or device control. Other inventory configurations may be outside the mapper. The current Part is context only.
+- **Bounded evidence analysis:** conditions identify supported ways missing evidence could affect this model. This is not general optimal evidence selection or an assurance that the suggested evidence exists.
+- **Operational scope:** one macOS arm64 / CPython 3.12.14 / InvenTree 1.5.6 environment. The demo used a superuser and copied synthetic DB. No cross-platform, load, concurrent-user, hostile-filesystem or least-privilege qualification. Dependency packages and host setup are supplied separately.
+- **Storage and trust:** locator/import policy, assessment aliases and ancestor-link/race confinement remain deferred. Receipt completion is not fsync or power-loss durability proof. Historical contract success is not source authentication; even current full verification uses the same pinned implementation, not an independent engineering oracle.
+- **Coverage:** the first demonstration export, in-host verification buttons, other cameras and evidence expanders were not exercised in that demonstration. The detached C06/C09 correction preserves untested matching-build semantic outcomes. Counts from different campaigns overlap.
+- **Preservation history:** a prior preservation directory rename retained identical bytes; actor/cause unknown and outside the cited 115-file index. No claim that every historical directory was invariant follows from that index.
 
-- The seven constraints are a synthetic contract, not validated formulas for arbitrary real equipment. Hardware qualification, engineering approval and customer acceptance are separate.
-- Input preparation is manual JSON construction and engineering interpretation. There is no PDF/OCR ingestion, automatic source authority, generalized unit conversion or timestamp-event inference.
-- **U01:** genuinely conflicting active camera data, including descriptive-only disagreements, prevents selecting a scalar specification identity. Agreed physical leaves remain usable. This can cause unnecessary refusal and is not physical impossibility.
-- Missing subject identity is not guessed. Unknown migration cost is unranked; optimality concerns only established feasible, cost-comparable, identity-eligible plans.
-- Saved upper-limit mappings cover registration error, resolution, throughput and power. Unsupported saved metric semantics remain qualified; physical FPS/voltage/transport constraints are still evaluated.
-- Evidence requests are lists, not an optimized value-of-information queue. Source locators are displayed text. There is no general document revision diff, transitive graph engine, background watcher or approval workflow.
-- The proposed adapter accepts already normalized milliseconds and adds an offset. It does not solve clock scale, synchronization, missing image sequences or closed-loop dynamics.
-- Finite numeric JSON encoding is rechecked within the contract's output tolerance. An encoding limitation is not proof of physical impossibility.
-- Local file safeguards address ordinary execution. Hostile filesystem races, extremely large adversarial inputs and production security are not qualified. Use trusted, bounded input and preserve originals.
-- Recorded tests and release checks establish bounded software behavior only. Full customer preparation/review effort, real savings, hardware performance and comparative method advantage remain unmeasured.
-- macOS and the installed Python versions in VALIDATION.md are the actual check environments. Linux and Windows are untested here. Full tests require symlink creation support.
-
-The frozen historical build retains its original failures, repair records and limitations. The prior candidate changed packaging and runners only. This portfolio release changes documentation and licensing only; neither revises the experiment or repairs U01.
+No hosted service, production readiness, hardware qualification, general camera compatibility, vendor endorsement, deployment approval, customer validation, willingness to pay, ROI or demonstrated CogniMap superiority is established. Deferred observations are not authorization for additional work.

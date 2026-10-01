@@ -1,0 +1,50 @@
+{
+  "package_kind": "public documentation-and-distribution composition; unchanged software",
+  "publication_status": "prepared locally; approval pending",
+  "repository": "KamHiggs/higgs-camera-change-review",
+  "proposed_branch": "integration/inventree-v0.1.3-correction.1",
+  "proposed_tag": "inventree-v0.1.3-correction.1",
+  "distribution": "0.1.3+correction.1",
+  "software_sha256": "4450e1fec729cc8c34ef4b0a71005eb35d267c5a4f2bf4aa40f5aa21ea3c5e9b",
+  "source_archives": {
+    "HIGGS_INVENTREE_CAMERA_CHANGE_THIN_v0.1.3+correction.1_LOCAL_CANDIDATE.zip": "fc10f3e7aae32e62d173616a9329a703ce2dd5780fc604eaff26dbf42ab40540",
+    "HIGGS_ASSESSMENT_VERIFIER_v0.1.3+correction.1.zip": "cf8241bf295cd02ea0635913023bc34836cb12ddd0e47723b33fb5ba84002616"
+  },
+  "wheel": {
+    "filename": "higgs_inventree_camera_review-0.1.3+correction.1-py3-none-any.whl",
+    "sha256": "a065bf22182f61f8263667290e6f49999c2ebb7effa32ab9ff1f9e31b3c6a66a"
+  },
+  "review_character": "author testing; separate nonblind review; recorded scripted demonstration",
+  "preserved_source_members": [
+    "LICENSE_REVIEW.md",
+    "dist/higgs_inventree_camera_review-0.1.3+correction.1-py3-none-any.whl",
+    "higgs_camera_review/__init__.py",
+    "higgs_camera_review/assessment_format.py",
+    "higgs_camera_review/assurance.py",
+    "higgs_camera_review/bounded_json.py",
+    "higgs_camera_review/compatibility.py",
+    "higgs_camera_review/contract.py",
+    "higgs_camera_review/core.py",
+    "higgs_camera_review/data/approved_runtime_pins.json",
+    "higgs_camera_review/data/assurance_policy.json",
+    "higgs_camera_review/data/higgs-v012-runtime-subset.zip",
+    "higgs_camera_review/data/historical-verifier-v0.1.1.zip",
+    "higgs_camera_review/data/historical-verifier-v0.1.2.zip",
+    "higgs_camera_review/data/subset_identity.json",
+    "higgs_camera_review/errors.py",
+    "higgs_camera_review/freshness.py",
+    "higgs_camera_review/inventree_adapter.py",
+    "higgs_camera_review/map_worker.py",
+    "higgs_camera_review/plugin.py",
+    "higgs_camera_review/presentation.py",
+    "higgs_camera_review/provenance.py",
+    "higgs_camera_review/replay.py",
+    "higgs_camera_review/static/panel.js",
+    "higgs_camera_review/summary.py",
+    "higgs_camera_review/verification.py",
+    "higgs_camera_review/views.py",
+    "pyproject.toml"
+  ],
+  "standalone_verifier_extracted_unchanged": true,
+  "application_tests_rerun_for_packaging": false
+}

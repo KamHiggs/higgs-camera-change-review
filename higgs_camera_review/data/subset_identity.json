@@ -1,0 +1,32 @@
+{
+  "original_archive_sha256": "d23cd87f6d842ceb850eba865bf1b19ce120a5185ccb58634dbdc622e05f78ee",
+  "original_manifest_sha256": "c6cf090c1092634573d8e45579b09e92b1a4f0a506137e47f4d0636a0f4e8786",
+  "subset_sha256": "6a9ebaf312febd9f6581304f29290dfc0a6ab3cfa43b4c9e71d17d518b4104ae",
+  "included_files": [
+    "LIMITATIONS.md",
+    "docs/BOUNDED_ADAPTER_CONTRACT.md",
+    "evidence/EVIDENCE_LEDGER.json",
+    "evidence/SOURCE_CAPTURES.json",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/ATTRIBUTION.md",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/LICENSE",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/app.py",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/camera_cognimap.py",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/camera_runtime.py",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/decision_questions.py",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/engine.py",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/questions_cli.py",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/reporting.py",
+    "runtime/higgs_camera_change_review_v0_3_0_rc1/sources.py",
+    "scenarios/A_compatible.json",
+    "scenarios/B_slow.json",
+    "scenarios/C_unknown.json",
+    "tools/applicability_gate.py",
+    "tools/bounded_adapter.py",
+    "tools/common.py",
+    "tools/ledger.py",
+    "tools/materialize_case.py",
+    "tools/run_experiment.py",
+    "tools/self_check.py"
+  ],
+  "meaning": "Byte-preserving runtime/input subset verified against the original pinned manifest. Not the original release ZIP. Original archive remains unchanged. Omitted review, historical archives and execution logs are not needed to run the mapped case. Manufacturer originals are not redistributed; captured claims and source identities remain."
+}

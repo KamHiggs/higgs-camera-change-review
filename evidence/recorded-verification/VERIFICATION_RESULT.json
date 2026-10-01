@@ -1,0 +1,89 @@
+{
+  "requested_level": "decision",
+  "assurance_level": "VERIFIED_RECORDED_DECISION",
+  "assessment_manifest_sha256": "db00600691c283ad8e702bcb2dbfa3f1ab6ac0d7de598be7722bddaeb2d72776",
+  "verifier_version": "0.1.3",
+  "verifier_software_sha256": "4450e1fec729cc8c34ef4b0a71005eb35d267c5a4f2bf4aa40f5aa21ea3c5e9b",
+  "engine_comparison": [
+    {
+      "operation": "analyze",
+      "exit_code": 0,
+      "same_exit": true,
+      "same_output_bytes": true,
+      "files": 19
+    },
+    {
+      "operation": "questions",
+      "exit_code": 0,
+      "same_exit": true,
+      "same_output_bytes": true,
+      "files": 17
+    }
+  ],
+  "execution_archive_identity": "6a9ebaf312febd9f6581304f29290dfc0a6ab3cfa43b4c9e71d17d518b4104ae",
+  "exported_runtime_subset_identity": {
+    "sha256": "6a9ebaf312febd9f6581304f29290dfc0a6ab3cfa43b4c9e71d17d518b4104ae",
+    "kind": "approved_runtime_subset",
+    "original_archive_sha256": "d23cd87f6d842ceb850eba865bf1b19ce120a5185ccb58634dbdc622e05f78ee",
+    "source_manifest_sha256": "c6cf090c1092634573d8e45579b09e92b1a4f0a506137e47f4d0636a0f4e8786",
+    "approved_member_set_sha256": "30c58d2e90de638859c16cbb04fc2c6b68fd5955c05daf8005b265583d201f5f"
+  },
+  "scope": "Agreement with separately pinned software/records; not manufacturer truth, physical identity, deployment approval or an independent oracle.",
+  "full_decision_status": "VERIFIED_RECORDED_DECISION",
+  "assessment_version": "0.1.3",
+  "executing_verifier_version": "0.1.3",
+  "assurance_details": {
+    "semantic_contract": "0.1.3",
+    "file_coverage": "Complete recorded assessment payload coverage; not authorship or authority",
+    "format_permission": {
+      "format_contract": "0.1.3",
+      "optional_ancillary": [],
+      "ancillary_assurance": "MANIFEST_VERIFIED_BUT_NOT_SEMANTICALLY_VERIFIED"
+    },
+    "checked": [
+      "recorded file coverage",
+      "versioned allowed file set",
+      "minimum document structures",
+      "pinned runtime and reproduced engine outputs",
+      "snapshot to typed inputs to mapper projection to engine result to summary.json",
+      "deterministic SUMMARY.md"
+    ],
+    "not_checked": [
+      "authorship",
+      "chronology and creation IDs",
+      "inventory display labels",
+      "snapshot.audit",
+      "process timestamps/PIDs/command/stream hashes",
+      "runtime_provenance.relationship",
+      "dependency/subset_identity.meaning",
+      "physical identity",
+      "manufacturer truth",
+      "engineering approval"
+    ],
+    "ancillary_files": [],
+    "ancillary_assurance": "MANIFEST_VERIFIED_BUT_NOT_SEMANTICALLY_VERIFIED"
+  },
+  "verifier_software_version": "0.1.3",
+  "assessment_format_version": "0.1.3",
+  "assurance_contract": "HIGGS-RECORDED-DECISION-0.1.3",
+  "historical_verification": {
+    "status": "VERIFIED_RECORDED_DECISION",
+    "contract": "HIGGS-RECORDED-DECISION-0.1.3",
+    "executing_verifier_version": "0.1.3",
+    "historical_verifier_archive_sha256": null,
+    "authenticated_creation_time": false
+  },
+  "recipient_requirement": {
+    "contract": "HIGGS-RECORDED-DECISION-0.1.3",
+    "origin": "CLI argument (external to assessment)",
+    "policy_id": "HIGGS-ASSURANCE-POLICY-0.1.3"
+  },
+  "acceptance": {
+    "status": "ACCEPTED",
+    "code": "REQUIRED_ASSURANCE_MET",
+    "meaning": "Assurance-policy result only; not deployment approval, source truth or physical compatibility"
+  },
+  "record_type": "HIGGS_VERIFICATION_RESULT_CONTENT",
+  "record_state": "CONTENT_ONLY",
+  "finality_rule": "Unpublished except as complete canonical VERIFICATION_RESULT.json. Temporary files are not receipts."
+}

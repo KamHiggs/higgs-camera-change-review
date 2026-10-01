@@ -1,0 +1,16 @@
+[
+  {
+    "operation": "analyze",
+    "exit_code": 0,
+    "same_exit": true,
+    "same_output_bytes": true,
+    "files": 19
+  },
+  {
+    "operation": "questions",
+    "exit_code": 0,
+    "same_exit": true,
+    "same_output_bytes": true,
+    "files": 17
+  }
+]

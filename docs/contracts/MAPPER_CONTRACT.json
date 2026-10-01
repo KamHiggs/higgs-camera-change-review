@@ -1,0 +1,219 @@
+{
+  "schema": "higgs-inventree-mapper-contract-v1",
+  "version": "0.1.2",
+  "host": "InvenTree 1.5.6",
+  "backend_api_version": 530,
+  "frontend_plugin_library_version": "1.5.0",
+  "trust_boundary": "Explicit inventory bindings and synthetic declarations, not manufacturer-source authentication",
+  "binding": {
+    "current": "Part.pk is recorded review ownership/context; name is display-only. Current inventory part is not engineering-modeled; candidate uses fixed synthetic installation.",
+    "substitute": "Part.pk/name plus exactly one ManufacturerPart.pk/manufacturer_id/manufacturer.name/MPN",
+    "accepted": {
+      "CAM-FLIR": [
+        "Teledyne FLIR",
+        "BFS-U3-51S5M"
+      ],
+      "CAM-ALLIED": [
+        "Allied Vision",
+        "Alvium 1800 U-507"
+      ],
+      "CAM-BASLER": [
+        "Basler",
+        "a2A1920-160umBAS"
+      ]
+    }
+  },
+  "parameters": [
+    {
+      "name": "HIGGS_CAMERA_ID",
+      "logical_name": "camera_id",
+      "source_model": "common.Parameter attached to Part via model_type/model_id",
+      "unit_policy": "empty label units only",
+      "raw_identity": [
+        "instance_id",
+        "part_id",
+        "parameter_id",
+        "template_id",
+        "template_name",
+        "data",
+        "units"
+      ],
+      "classification": "unverified_inventory_context",
+      "accepted": [
+        "CAM-FLIR",
+        "CAM-ALLIED",
+        "CAM-BASLER"
+      ],
+      "destination": "selected camera_id, exact manufacturer/model binding"
+    },
+    {
+      "name": "HIGGS_ISP_ENABLED",
+      "logical_name": "isp_enabled",
+      "source_model": "common.Parameter attached to Part via model_type/model_id",
+      "unit_policy": "empty label units only",
+      "raw_identity": [
+        "instance_id",
+        "part_id",
+        "parameter_id",
+        "template_id",
+        "template_name",
+        "data",
+        "units"
+      ],
+      "classification": "synthetic_operating_declaration",
+      "accepted": [
+        "false",
+        "true",
+        "unknown"
+      ],
+      "destination": "FLIR scenario.camera_modes.CAM-FLIR.isp_enabled; boolean/null; retained label not applied for other models"
+    },
+    {
+      "name": "HIGGS_PIXEL_FORMAT",
+      "logical_name": "pixel_format",
+      "source_model": "common.Parameter attached to Part via model_type/model_id",
+      "unit_policy": "empty label units only",
+      "raw_identity": [
+        "instance_id",
+        "part_id",
+        "parameter_id",
+        "template_id",
+        "template_name",
+        "data",
+        "units"
+      ],
+      "classification": "synthetic_operating_declaration",
+      "accepted": [
+        "Mono8"
+      ],
+      "destination": "scenario.premises.pixel_format and selected camera_modes.pixel_format"
+    },
+    {
+      "name": "HIGGS_TRANSPORT",
+      "logical_name": "transport",
+      "source_model": "common.Parameter attached to Part via model_type/model_id",
+      "unit_policy": "empty label units only",
+      "raw_identity": [
+        "instance_id",
+        "part_id",
+        "parameter_id",
+        "template_id",
+        "template_name",
+        "data",
+        "units"
+      ],
+      "classification": "synthetic_operating_declaration",
+      "accepted": [
+        "USB3-Vision"
+      ],
+      "destination": "scenario.premises.transport"
+    },
+    {
+      "name": "HIGGS_EVIDENCE_ID",
+      "logical_name": "evidence_identity",
+      "source_model": "common.Parameter attached to Part via model_type/model_id",
+      "unit_policy": "empty label units only",
+      "raw_identity": [
+        "instance_id",
+        "part_id",
+        "parameter_id",
+        "template_id",
+        "template_name",
+        "data",
+        "units"
+      ],
+      "classification": "evidence_pointer",
+      "accepted": [
+        "d23cd87f6d842ceb850eba865bf1b19ce120a5185ccb58634dbdc622e05f78ee"
+      ],
+      "destination": "exact pinned Higgs original identity; no new admission"
+    }
+  ],
+  "requirement": {
+    "source": "POST fast_required_fps (not an ORM parameter)",
+    "raw": "ASCII integer string 1..1000",
+    "normalized": "integer",
+    "units": "fps",
+    "classification": "synthetic_user_requirement",
+    "destination": "SYN-REQ-LINE-FAST/data/required_fps",
+    "generated_source": "evidence/USER_SYNTHETIC_REQUIREMENTS.json",
+    "not_changed": "Other synthetic requirements, costs, characterization and premises remain pinned and are carried in exported projection",
+    "freshness": "Request-local synthetic assumption. History restores saved value with explicit label; edited value is a draft/what-if, not a maintained project requirement."
+  },
+  "preserved_evidence": {
+    "manufacturer_specifications": "pinned source/capture IDs, evidence class, lexical value, exact normalized value, units, locator, material conditions, capture/source SHA",
+    "fictional_tests": "retained synthetic provenance and applicability; not converted to observed measurements",
+    "observed_measurements": "No new measurement intake implemented; no fabricated observation",
+    "normalization": "Only declared enum-to-boolean/null and integer string parsing; no aliases, OCR, free-text extraction or implicit unit conversion"
+  },
+  "staleness": {
+    "implementation": "higgs_camera_review/freshness.py",
+    "rule": "Mapper-defined relevance; never infer relevance from equal numerical outputs",
+    "DECISION_INPUT_CHANGE": [
+      "parsed fast_required_fps",
+      "FLIR isp_enabled",
+      "pixel_format",
+      "transport"
+    ],
+    "EVIDENCE_OR_IDENTITY_CHANGE": [
+      "camera/evidence IDs",
+      "mapped object/template identity",
+      "manufacturer/MPN/source binding",
+      "runtime/software/version identity",
+      "other changed recorded binding fields"
+    ],
+    "DISPLAY_CONTEXT_CHANGE": [
+      "current/substitute display name",
+      "current role label",
+      "unused non-FLIR ISP label",
+      "raw equivalent numeric spelling"
+    ],
+    "excluded": [
+      "audit timestamps",
+      "unmapped Part.description and Parameter.note"
+    ],
+    "primary_order": [
+      "STALE_EVIDENCE_BINDING",
+      "STALE_ANALYSIS",
+      "CURRENT_ANALYSIS"
+    ],
+    "invalid": "INVALID_COMPARISON_INPUT; no current/stale conclusion"
+  },
+  "request_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "current_part",
+      "substitute_part",
+      "fast_required_fps"
+    ],
+    "properties": {
+      "current_part": {
+        "type": "integer"
+      },
+      "substitute_part": {
+        "type": "integer"
+      },
+      "fast_required_fps": {
+        "type": "string",
+        "pattern": "^[0-9]+$",
+        "description": "ASCII decimal, numeric1..1000; leading zeros accepted within32 characters; raw spelling retained.",
+        "minLength": 1,
+        "maxLength": 32
+      }
+    }
+  },
+  "note": "Request schema documents intended client shape; backend accepts integer-coercible part IDs and stringifies requirement then validates. Identity and host permission checks still apply.",
+  "verification": {
+    "assessment_contract": "higgs-assessment-v0.1.2",
+    "summary_contract": "higgs-summary-v0.1.2",
+    "levels": [
+      "REPRODUCED_ENGINE_OUTPUT",
+      "VERIFIED_RECORDED_DECISION"
+    ],
+    "trust": "Separately obtained verifier and approved pins; same versioned implementation reconstructs records, not an independent correctness oracle",
+    "legacy": "0.1.0 and0.1.1 dispatch to exact archived0.1.1 verifier; missing verifier explicitly unavailable. See VERIFIER_COMPATIBILITY.md.",
+    "metadata": "Preserve historical IDs/timestamps. New0.1.2 SUMMARY.md is deterministic and checked at full-decision level. Old Markdown retains its original contract; no newer guarantees inferred."
+  },
+  "correction_note": "Mapping and engineering semantics unchanged; new assessment storage/verification contract is separate."
+}

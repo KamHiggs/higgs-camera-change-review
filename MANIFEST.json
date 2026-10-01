@@ -1,0 +1,411 @@
+{
+  "format": "higgs-public-package-sha256-v1",
+  "algorithm": "SHA-256",
+  "self_exclusion": "MANIFEST.json only",
+  "files": {
+    ".gitignore": {
+      "sha256": "6b397969693185190bed7409203bc6af8966dae9a17a40cb9be1901dc3fbc078",
+      "bytes": 53
+    },
+    "ATTRIBUTION.md": {
+      "sha256": "a3b7337cd028f0ba3a1e93b79e7de3e37293977ab05be01487d34d30db6a0300",
+      "bytes": 1642
+    },
+    "LICENSE": {
+      "sha256": "c17104351cc22a69778d7f0fccbdba33f29a4a5046f9d64eecb7a215eaa8d98e",
+      "bytes": 1069
+    },
+    "LICENSE_REVIEW.md": {
+      "sha256": "b519f36312dbbaa34ad2308582785ca7a8d5500ca6f39c6902563f923ce2bdf4",
+      "bytes": 2082
+    },
+    "LICENSE_STATUS.md": {
+      "sha256": "cdb51ca86a3b4a0562aa8ba007ad129e9043f1b0af8bca9dd38e0cf0110eb8b0",
+      "bytes": 1429
+    },
+    "PROVENANCE.json": {
+      "sha256": "3a5f6a0cf33a23c1a8d0f897220054182a14ff303177d16c0c2298e4c26bf20c",
+      "bytes": 20421
+    },
+    "PUBLIC_FILES.json": {
+      "sha256": "df2a5d0dbee45d3e5116ee094151320445dfb798f13c036dcd861bb0e511beeb",
+      "bytes": 5106
+    },
+    "README.md": {
+      "sha256": "d3e3ec1942bf02b4b42d20c4a8dfd3140c9bd8e9bb123057c48d6cbc9e44e1b7",
+      "bytes": 4133
+    },
+    "RELEASE_IDENTITY.json": {
+      "sha256": "00de4fbd1731e5f4a413637c29ed09142ff7634107786656ea592c8952e6ea24",
+      "bytes": 2430
+    },
+    "RELEASE_NOTES.md": {
+      "sha256": "532773d91c5fe11c92a1ee749f2283ba895b5397f90104adb2c7d86220679952",
+      "bytes": 2240
+    },
+    "dist/higgs_inventree_camera_review-0.1.3+correction.1-py3-none-any.whl": {
+      "sha256": "a065bf22182f61f8263667290e6f49999c2ebb7effa32ab9ff1f9e31b3c6a66a",
+      "bytes": 538575
+    },
+    "docs/DEMONSTRATION.md": {
+      "sha256": "1660af982dbfaaa6dc539553d9308a18dbbee6450b43f554f5e52a4a52c57640",
+      "bytes": 4087
+    },
+    "docs/INSTALLATION.md": {
+      "sha256": "52c82eec624a87f437192c0eab821e8717a475876e48ea66be1be2dd35d7df90",
+      "bytes": 3722
+    },
+    "docs/KNOWN_LIMITATIONS.md": {
+      "sha256": "2c765f1d78f2645acca9f964675d1bc7c988cb29f480953b1429de0fcac0a186",
+      "bytes": 3144
+    },
+    "docs/OFFLINE_VERIFICATION.md": {
+      "sha256": "2a5f7ddcc13c4f99a156292ee9c33196155e913365dc899c20dce0438a8dc8cd",
+      "bytes": 2771
+    },
+    "docs/REVIEW_STATUS.md": {
+      "sha256": "cc2f923e34e32a076636cda02a57917ce6ff82188c0b4b1565d5d9f558fc8644",
+      "bytes": 3843
+    },
+    "docs/RIGHTS_AND_PROVENANCE.md": {
+      "sha256": "21be4c48f63094901493e47b733cca598f914d40243ac93864fa1f52525b1dd8",
+      "bytes": 3864
+    },
+    "docs/SOURCE_IDENTITIES.json": {
+      "sha256": "536de112ac5eddf8d60676b418a227beefc101dfb703d9323401f80c0f1a3f73",
+      "bytes": 8438
+    },
+    "docs/contracts/ASSURANCE_CONTRACT.md": {
+      "sha256": "2f5e738571ce8790cb217a2d2264a75337dc1e28322b55e4587fd9b8502f1b90",
+      "bytes": 5235
+    },
+    "docs/contracts/COMPATIBILITY_MATRIX.json": {
+      "sha256": "09af0dcc9c6f47c54cec2ba50278c2b746352f9cc8b930ed0ff8a4c1de28ea49",
+      "bytes": 3146
+    },
+    "docs/contracts/MAPPER_CONTRACT.json": {
+      "sha256": "e8df738f91c992feb41265c2868dafb8e2920cb0c4517ac6c35fed490a319e07",
+      "bytes": 7846
+    },
+    "docs/contracts/VERIFIER_COMPATIBILITY.md": {
+      "sha256": "9c0f5dd5594291e2e9e62273d2b83e50850f4954e44d477944f7695faf6b31d1",
+      "bytes": 1867
+    },
+    "docs/demo.html": {
+      "sha256": "89ecf28dacf6661010c3ebd3645033315d997e4f3854eec4827e126f554735a4",
+      "bytes": 5450
+    },
+    "docs/historical/InvenTree-LICENSE.txt": {
+      "sha256": "70f21a7a9bb007581b06860ad76d623c95d5c92663a2326b5fa79a198aed55e0",
+      "bytes": 1079
+    },
+    "docs/historical/LICENSE": {
+      "sha256": "c17104351cc22a69778d7f0fccbdba33f29a4a5046f9d64eecb7a215eaa8d98e",
+      "bytes": 1069
+    },
+    "docs/historical/LICENSE_AND_SOURCE_USE.md": {
+      "sha256": "2651a168bb6d9f70173f24e12a80f8d4f7bac0b0c9842fca9fcef2cdffdd7061",
+      "bytes": 731
+    },
+    "docs/historical/PROVENANCE_AND_ATTRIBUTION.md": {
+      "sha256": "3b65972241f0aea883b7d49f750bf52b3ad819d39c048b24c3cb33dab8476cc2",
+      "bytes": 2195
+    },
+    "docs/historical/runtime-ATTRIBUTION.md": {
+      "sha256": "d1910e95a14989f42ba97c96f592e8170f06a06974bfb156e4311db996a68743",
+      "bytes": 3871
+    },
+    "docs/historical/runtime-LICENSE": {
+      "sha256": "c17104351cc22a69778d7f0fccbdba33f29a4a5046f9d64eecb7a215eaa8d98e",
+      "bytes": 1069
+    },
+    "docs/images/04-first-assessment-isp-off.png": {
+      "sha256": "67abd71bd4e02742db2505f01b2fa0d9ed5cee25e09c3616937408b8b5c92dbb",
+      "bytes": 319157
+    },
+    "docs/images/06-earlier-assessment-reopened-stale.png": {
+      "sha256": "e3af2e21f4cf32f41547069492637f896e370700a13225ff9664ea597f67b9d6",
+      "bytes": 319637
+    },
+    "docs/images/07-new-assessment-isp-on.png": {
+      "sha256": "136583a5b1b350f0690afe4d711373c63d03eeb0843c54d9325238b34469ec39",
+      "bytes": 306998
+    },
+    "downloads/HIGGS_ASSESSMENT_VERIFIER_v0.1.3+correction.1.zip": {
+      "sha256": "cf8241bf295cd02ea0635913023bc34836cb12ddd0e47723b33fb5ba84002616",
+      "bytes": 548220
+    },
+    "evidence/DEMONSTRATION_RECORD.json": {
+      "sha256": "826886048cf97448bfa7dc1e3570c7e016bdd276686176f10f7d7d0d8b9e683a",
+      "bytes": 5346
+    },
+    "evidence/recorded-verification/ENGINE_COMPARISON.json": {
+      "sha256": "04bf711a44939530d5b823f0dc5a14ccf5b656171847febc1df8053b9ccbba4d",
+      "bytes": 259
+    },
+    "evidence/recorded-verification/EXIT_CODE.txt": {
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    "evidence/recorded-verification/STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/recorded-verification/VERIFICATION_RESULT.json": {
+      "sha256": "76d4965c61c22d1396bba0a55d174a80494251b92f6f571b0b5ecbd49a7ae223",
+      "bytes": 3587
+    },
+    "examples/exports/first-assessment-isp-off.zip": {
+      "sha256": "c36b2d16907ad405b8b99096b76f6a08cc84b7e70d098146c85c9dcaf2ccd9bf",
+      "bytes": 270548
+    },
+    "examples/exports/second-assessment-isp-on.zip": {
+      "sha256": "75dfcec7626cf379196d3f7ff4a682b3d1e741da332371dd7df8702ffa56a7dc",
+      "bytes": 254514
+    },
+    "higgs_camera_review/__init__.py": {
+      "sha256": "53dbc96b5f4426ff727e85b8b884fb062e02d7f74e849dee64ac5ff76bc8bb48",
+      "bytes": 93
+    },
+    "higgs_camera_review/assessment_format.py": {
+      "sha256": "e3bc50c80ada2a5f43eb00f91be6d955d4e87e7b8639ac3e671894fecbd9949f",
+      "bytes": 11001
+    },
+    "higgs_camera_review/assurance.py": {
+      "sha256": "936f724d2fcfcb81322a96f4f0be1bc144900031774986b2c4fd1934468d1db6",
+      "bytes": 3179
+    },
+    "higgs_camera_review/bounded_json.py": {
+      "sha256": "6f2d187a1a76ac955fed149893f03aeae874fcba7679413f10094ecd35cab18e",
+      "bytes": 2021
+    },
+    "higgs_camera_review/compatibility.py": {
+      "sha256": "048490cf18d6e6e847e73a4b9abcdddf19708865b188338dc7b9f391a8c79335",
+      "bytes": 3822
+    },
+    "higgs_camera_review/contract.py": {
+      "sha256": "c94a9d34675e729a7510ed4072e0cabe361c03f246e97b4b1d71d47d5ab7794e",
+      "bytes": 5714
+    },
+    "higgs_camera_review/core.py": {
+      "sha256": "2891e432cc905747e18641bd6ac0e55b58c4fb2b070d963c1660ba8b8b586f43",
+      "bytes": 11493
+    },
+    "higgs_camera_review/data/approved_runtime_pins.json": {
+      "sha256": "30c58d2e90de638859c16cbb04fc2c6b68fd5955c05daf8005b265583d201f5f",
+      "bytes": 4335
+    },
+    "higgs_camera_review/data/assurance_policy.json": {
+      "sha256": "09af0dcc9c6f47c54cec2ba50278c2b746352f9cc8b930ed0ff8a4c1de28ea49",
+      "bytes": 3146
+    },
+    "higgs_camera_review/data/higgs-v012-runtime-subset.zip": {
+      "sha256": "6a9ebaf312febd9f6581304f29290dfc0a6ab3cfa43b4c9e71d17d518b4104ae",
+      "bytes": 97128
+    },
+    "higgs_camera_review/data/historical-verifier-v0.1.1.zip": {
+      "sha256": "96f99c16314a57e7c1eb6c6e769e3cae7af2e0cb4081b5423eb23e3554b6bfb6",
+      "bytes": 130607
+    },
+    "higgs_camera_review/data/historical-verifier-v0.1.2.zip": {
+      "sha256": "ef322e698e0c4c7f283f98b0136877cf1926f2504210beae88b36c6ceb310b69",
+      "bytes": 271240
+    },
+    "higgs_camera_review/data/subset_identity.json": {
+      "sha256": "768041a1c358f48cceed38080a21a790a9e6ee22267bf0047cffdc894563fefd",
+      "bytes": 1769
+    },
+    "higgs_camera_review/errors.py": {
+      "sha256": "f933f34db4e8bf48df587d90f79d643c73844dee8c88d57daf0f50b62d0b9b10",
+      "bytes": 1497
+    },
+    "higgs_camera_review/freshness.py": {
+      "sha256": "052940538016b34b5ef83bbe81aaa74769895492232d28d190706d8bf3c3bd51",
+      "bytes": 2633
+    },
+    "higgs_camera_review/inventree_adapter.py": {
+      "sha256": "a2fa1a38b61fb6b9157cbc6bbf50c7d13095fb2b646c6aac75228f2dfe9e218e",
+      "bytes": 3082
+    },
+    "higgs_camera_review/map_worker.py": {
+      "sha256": "e76db2ad7eca10c69cb04c03c028219e1e0b4ec2c1db157b5c537b0f4290ee64",
+      "bytes": 2724
+    },
+    "higgs_camera_review/plugin.py": {
+      "sha256": "2ff98446ca64fd2c90c75a4166493ca2d5fcffe3a60903c05bae85d7b81e6a9e",
+      "bytes": 1593
+    },
+    "higgs_camera_review/presentation.py": {
+      "sha256": "7de5366353b72f79435a47fa752690b612f54bff24da806f7d888773248e6101",
+      "bytes": 1351
+    },
+    "higgs_camera_review/provenance.py": {
+      "sha256": "52e5110f36f4a098f02d25e37afb68304ab17d847f2cdad35bcd3472ddda7c56",
+      "bytes": 3562
+    },
+    "higgs_camera_review/replay.py": {
+      "sha256": "d57e4b1942316b264bf31454de9168be6abb0e949ef5e586d42028bb102ef698",
+      "bytes": 338
+    },
+    "higgs_camera_review/static/panel.js": {
+      "sha256": "73c91eba1607e3a68ef5e7b5fa8106dee59d389b79332b082b612ef249ef9a63",
+      "bytes": 14645
+    },
+    "higgs_camera_review/summary.py": {
+      "sha256": "d62ec684b1e2be0561db47481b684bf385f49f57a99c0ffc7bc38378cf83d2b0",
+      "bytes": 4409
+    },
+    "higgs_camera_review/verification.py": {
+      "sha256": "7982e5650a243300e9ebf46f03f294aba03029ea8e7ef0fe5a1c92c38e5f09f0",
+      "bytes": 16010
+    },
+    "higgs_camera_review/views.py": {
+      "sha256": "efce2919d6f0f53b6c982e3b4c3b07ae82be61e86370105d2398c369bff4db63",
+      "bytes": 8519
+    },
+    "pyproject.toml": {
+      "sha256": "1116d032e493978a2a21f42e50631819c3276e533e49c7d0472cc13bac10e200",
+      "bytes": 715
+    },
+    "verifier/ASSURANCE_CONTRACT.md": {
+      "sha256": "2f5e738571ce8790cb217a2d2264a75337dc1e28322b55e4587fd9b8502f1b90",
+      "bytes": 5235
+    },
+    "verifier/COMPATIBILITY_MATRIX.json": {
+      "sha256": "09af0dcc9c6f47c54cec2ba50278c2b746352f9cc8b930ed0ff8a4c1de28ea49",
+      "bytes": 3146
+    },
+    "verifier/CORRECTION_NOTES.md": {
+      "sha256": "e8e87b5ae68e4e2aa9ea0b7672eb15eba7c71c4911c7053a6f738b806ef36dcd",
+      "bytes": 4979
+    },
+    "verifier/LICENSE_REVIEW.md": {
+      "sha256": "b519f36312dbbaa34ad2308582785ca7a8d5500ca6f39c6902563f923ce2bdf4",
+      "bytes": 2082
+    },
+    "verifier/MANIFEST.json": {
+      "sha256": "f815fadfe5ef2413f44a698bf668215bf43d9d6972e4351175fa560a8b336a38",
+      "bytes": 5390
+    },
+    "verifier/README.md": {
+      "sha256": "f4a5dd81307f1d76bf8760c8f320b7a71f8b4a40182f7b9d4807be473db161c8",
+      "bytes": 2612
+    },
+    "verifier/VERIFIER_COMPATIBILITY.md": {
+      "sha256": "9c0f5dd5594291e2e9e62273d2b83e50850f4954e44d477944f7695faf6b31d1",
+      "bytes": 1867
+    },
+    "verifier/dependency_notes/LICENSE_AND_SOURCE_USE.md": {
+      "sha256": "2651a168bb6d9f70173f24e12a80f8d4f7bac0b0c9842fca9fcef2cdffdd7061",
+      "bytes": 731
+    },
+    "verifier/dependency_notes/PROVENANCE_AND_ATTRIBUTION.md": {
+      "sha256": "3b65972241f0aea883b7d49f750bf52b3ad819d39c048b24c3cb33dab8476cc2",
+      "bytes": 2195
+    },
+    "verifier/higgs_camera_review/__init__.py": {
+      "sha256": "53dbc96b5f4426ff727e85b8b884fb062e02d7f74e849dee64ac5ff76bc8bb48",
+      "bytes": 93
+    },
+    "verifier/higgs_camera_review/assessment_format.py": {
+      "sha256": "e3bc50c80ada2a5f43eb00f91be6d955d4e87e7b8639ac3e671894fecbd9949f",
+      "bytes": 11001
+    },
+    "verifier/higgs_camera_review/assurance.py": {
+      "sha256": "936f724d2fcfcb81322a96f4f0be1bc144900031774986b2c4fd1934468d1db6",
+      "bytes": 3179
+    },
+    "verifier/higgs_camera_review/bounded_json.py": {
+      "sha256": "6f2d187a1a76ac955fed149893f03aeae874fcba7679413f10094ecd35cab18e",
+      "bytes": 2021
+    },
+    "verifier/higgs_camera_review/compatibility.py": {
+      "sha256": "048490cf18d6e6e847e73a4b9abcdddf19708865b188338dc7b9f391a8c79335",
+      "bytes": 3822
+    },
+    "verifier/higgs_camera_review/contract.py": {
+      "sha256": "c94a9d34675e729a7510ed4072e0cabe361c03f246e97b4b1d71d47d5ab7794e",
+      "bytes": 5714
+    },
+    "verifier/higgs_camera_review/core.py": {
+      "sha256": "2891e432cc905747e18641bd6ac0e55b58c4fb2b070d963c1660ba8b8b586f43",
+      "bytes": 11493
+    },
+    "verifier/higgs_camera_review/data/approved_runtime_pins.json": {
+      "sha256": "30c58d2e90de638859c16cbb04fc2c6b68fd5955c05daf8005b265583d201f5f",
+      "bytes": 4335
+    },
+    "verifier/higgs_camera_review/data/assurance_policy.json": {
+      "sha256": "09af0dcc9c6f47c54cec2ba50278c2b746352f9cc8b930ed0ff8a4c1de28ea49",
+      "bytes": 3146
+    },
+    "verifier/higgs_camera_review/data/higgs-v012-runtime-subset.zip": {
+      "sha256": "6a9ebaf312febd9f6581304f29290dfc0a6ab3cfa43b4c9e71d17d518b4104ae",
+      "bytes": 97128
+    },
+    "verifier/higgs_camera_review/data/historical-verifier-v0.1.1.zip": {
+      "sha256": "96f99c16314a57e7c1eb6c6e769e3cae7af2e0cb4081b5423eb23e3554b6bfb6",
+      "bytes": 130607
+    },
+    "verifier/higgs_camera_review/data/historical-verifier-v0.1.2.zip": {
+      "sha256": "ef322e698e0c4c7f283f98b0136877cf1926f2504210beae88b36c6ceb310b69",
+      "bytes": 271240
+    },
+    "verifier/higgs_camera_review/data/subset_identity.json": {
+      "sha256": "768041a1c358f48cceed38080a21a790a9e6ee22267bf0047cffdc894563fefd",
+      "bytes": 1769
+    },
+    "verifier/higgs_camera_review/errors.py": {
+      "sha256": "f933f34db4e8bf48df587d90f79d643c73844dee8c88d57daf0f50b62d0b9b10",
+      "bytes": 1497
+    },
+    "verifier/higgs_camera_review/freshness.py": {
+      "sha256": "052940538016b34b5ef83bbe81aaa74769895492232d28d190706d8bf3c3bd51",
+      "bytes": 2633
+    },
+    "verifier/higgs_camera_review/inventree_adapter.py": {
+      "sha256": "a2fa1a38b61fb6b9157cbc6bbf50c7d13095fb2b646c6aac75228f2dfe9e218e",
+      "bytes": 3082
+    },
+    "verifier/higgs_camera_review/map_worker.py": {
+      "sha256": "e76db2ad7eca10c69cb04c03c028219e1e0b4ec2c1db157b5c537b0f4290ee64",
+      "bytes": 2724
+    },
+    "verifier/higgs_camera_review/plugin.py": {
+      "sha256": "2ff98446ca64fd2c90c75a4166493ca2d5fcffe3a60903c05bae85d7b81e6a9e",
+      "bytes": 1593
+    },
+    "verifier/higgs_camera_review/presentation.py": {
+      "sha256": "7de5366353b72f79435a47fa752690b612f54bff24da806f7d888773248e6101",
+      "bytes": 1351
+    },
+    "verifier/higgs_camera_review/provenance.py": {
+      "sha256": "52e5110f36f4a098f02d25e37afb68304ab17d847f2cdad35bcd3472ddda7c56",
+      "bytes": 3562
+    },
+    "verifier/higgs_camera_review/replay.py": {
+      "sha256": "d57e4b1942316b264bf31454de9168be6abb0e949ef5e586d42028bb102ef698",
+      "bytes": 338
+    },
+    "verifier/higgs_camera_review/static/panel.js": {
+      "sha256": "73c91eba1607e3a68ef5e7b5fa8106dee59d389b79332b082b612ef249ef9a63",
+      "bytes": 14645
+    },
+    "verifier/higgs_camera_review/summary.py": {
+      "sha256": "d62ec684b1e2be0561db47481b684bf385f49f57a99c0ffc7bc38378cf83d2b0",
+      "bytes": 4409
+    },
+    "verifier/higgs_camera_review/verification.py": {
+      "sha256": "7982e5650a243300e9ebf46f03f294aba03029ea8e7ef0fe5a1c92c38e5f09f0",
+      "bytes": 16010
+    },
+    "verifier/higgs_camera_review/views.py": {
+      "sha256": "efce2919d6f0f53b6c982e3b4c3b07ae82be61e86370105d2398c369bff4db63",
+      "bytes": 8519
+    },
+    "verifier/verify_assessment.py": {
+      "sha256": "a30d96b105345ba408fba124a9367f4283b703dc05a74081a7c0dab7e35c09cc",
+      "bytes": 106
+    }
+  }
+}

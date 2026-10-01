@@ -1,6 +1,7 @@
 __pycache__/
-*.py[cod]
-records/
-test_runs/
-outputs/
-.DS_Store
+*.pyc
+.venv/
+venv/
+work/
+*.sqlite3
+.env

@@ -1,0 +1,19 @@
+# Rights and provenance
+
+The owner's current adoption is in [LICENSE_STATUS.md](../LICENSE_STATUS.md). This table describes the inspected record; hashes and attribution are not themselves permission.
+
+| Included material | Origin / classification | Documented redistribution basis and remaining qualification |
+|---|---|---|
+| Integration modules, UI, mapper, current and historical verifiers, new public documentation | AI-assisted work directed by Kamden; not identified as externally copied application code | Kamden's explicit MIT adoption for material he controls; copyright notice names Kamden Higgs. No specific outside human contribution awaiting permission was identified in inspected records. |
+| Near-real tools, synthetic scenarios and their generated outputs | Solara-origin experiment, subsequent AI-assisted corrections under Kamden's direction | Explicit current MIT adoption for the controlled wrapper material. Historical preparation notes are retained and are not substituted for this decision. |
+| Retained camera runtime | Copied from the earlier Higgs camera release | Existing MIT license and historical attribution preserved inside the pinned subsets. The earlier owner declaration covers shared challenge and eight contributed/design fixtures; no new ownership inference from AI involvement. Only the selected runtime subset is bundled here. |
+| Manufacturer-source captures and generated projections | Externally sourced factual values, short wording/locators, product names and URLs from Teledyne FLIR, Basler and Allied Vision | Original source-use notes describe small qualified factual captures, not redistribution of full pages/PDFs. No vendor license grant or endorsement is claimed. No specific conflicting restriction was identified in the inspected provenance records; that is not a legal determination of all third-party rights. These materials are not relicensed by the owner's MIT decision. |
+| Three authentic demo screenshots and two synthetic exports | Captures/outputs of the owner-directed local software demonstration; InvenTree UI appears in screenshots | Included as the authorized public demonstration. Higgs material follows the current owner license; InvenTree UI originates from its MIT-licensed project. No browser/host binary, vendor product photograph, whole vendor document or customer data is intentionally included. |
+
+No concrete unresolved permission request was identified from the inspected included-file provenance. This does not independently establish copyrightability or exclusive ownership of every generated element. No additional owner confirmation is invented or requested for already adopted material.
+
+InvenTree is an external host, not redistributed as source or binaries here. Its [upstream license](historical/InvenTree-LICENSE.txt) is MIT, copyright InvenTree Developers; preserve its license if distributing it separately. The included screenshot UI is acknowledged here. Camera marks identify products only. No upstream affiliation is implied.
+
+The unmodified historical [source-use note](historical/LICENSE_AND_SOURCE_USE.md) and [provenance note](historical/PROVENANCE_AND_ATTRIBUTION.md) remain available, along with notices embedded in the verifier and runtime. Some historical notices refer to files from larger private packages; those are source-history references, not a claim that those full packages are included.
+
+The public allowlist excludes owner conversations/work orders, copied databases, accounts, private execution logs, raw install logs, environments, wheelhouses, browser binaries, internal archives and reviewer workspaces. The two exact synthetic exports contain their own normalized process metadata (relative commands, PIDs, timestamps and stream hashes) as part of their covered record. They do not contain the host account configuration or private command logs.

@@ -1,22 +1,13 @@
-# Attribution and source provenance
+# Attribution
 
-**Created and led by Kamden Higgs.** Higgs AI is the project brand. Kamden's role covers project direction, requirements, coordination of design and reviews, and release decisions. The copyright notice names Kamden Higgs based on his express statement; brand and creator credit alone were not used to infer ownership.
+**Created and led by Kamden Higgs.** Higgs AI.
 
-The frozen implementation was prepared with Codex assistance from the supplied engineering-change CogniMap/design handoff. The lineage records review contributions attributed to Claude, Gemini, DeepSeek and Grok with unequal coverage. These names describe development records, not endorsement, authenticated exact model versions, or approval of work a reviewer did not inspect. Kamden is not represented as having hand-written every line.
+Kamden directed the requirements, CogniMap/design handoffs, coordination, scope and release decisions. Codex assisted implementation, corrections, integration and release preparation. This does not represent Kamden as having manually written every line.
 
-Included material and recorded origins:
+The initial Python-native CogniMap and near-real experiment were supplied through Solara. The retained camera runtime records contributions attributed to Claude, Gemini, DeepSeek and Grok with differing coverage. Its original MIT license and attribution are preserved within each pinned runtime subset. These are development records, not provider endorsement or authenticated exact model identities.
 
-- Four application modules and two development runners: frozen implementation 0.2.1-build1.2, with the prior candidate's packaging-only runner changes retained unchanged.
-- Shared public synthetic example, illustrative firmware, world contract and interface: supplied engineering challenge. The saved HTML example was generated from that synthetic case.
-- Five review fixtures: contributions attributed in the handoff to Claude, including shared challenge content.
-- Three additional fixtures: supplied design-handoff checks (devised shared, mixed zero speed and descriptive conflict).
-- Own-boundary fixture: the implementation builder's synthetic three-speed example.
-- Release documentation and metadata: AI-assisted packaging work directed by Kamden.
+Claude conducted a separate, nonblind review of this correction build and the subsequent demonstration. Earlier contribution and review overlap remains; this is not independent approval. The C06/C09 correction to the review is retained in the public [review-status summary](docs/REVIEW_STATUS.md), with hashes identifying the original private records.
 
-Kamden confirms that the shared challenge and all eight contributed/design fixtures were created in AI sessions he directed, with no known outside material incorporated. This is an owner declaration, not independently verified authorship or a legal finding. No specific conflicting third-party license or outside human contributor awaiting permission was identified in the inspected release records. Human/AI contribution records do not prove exclusive copyright in every generated element.
+The three screenshots are authentic, unmodified captures from Claude's scripted browser demonstration of the real InvenTree integration. They are not generated interfaces or a human screen recording. The operating requirements, test records and costs are synthetic; manufacturer-source captures are separately qualified source material.
 
-The [MIT license](LICENSE) is adopted for release material Kamden has authority to license. [PROVENANCE.json](PROVENANCE.json) preserves relative source locations, file identities and transformations. A hash, local copy, attribution or reviewer statement is not a license grant.
-
-No third-party Python distributions, binaries, fonts, images, datasets, browser assets, provider clients or logos are bundled. Python and its standard library are supplied by the user, not distributed in this archive.
-
-Private conversations, the full internal development history and raw execution records are excluded. This release makes no claim of hardware qualification, customer demand, savings or a controlled CogniMap advantage.
+InvenTree supplies the host interface and plugin framework. No affiliation with, endorsement by, or upstream acceptance from InvenTree or a camera manufacturer is claimed. See [rights and provenance](docs/RIGHTS_AND_PROVENANCE.md).

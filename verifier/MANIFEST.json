@@ -1,0 +1,142 @@
+{
+  "format": "higgs-local-distribution-manifest-v1",
+  "self_exclusion": "MANIFEST.json at root only",
+  "files": {
+    "ASSURANCE_CONTRACT.md": {
+      "sha256": "2f5e738571ce8790cb217a2d2264a75337dc1e28322b55e4587fd9b8502f1b90",
+      "bytes": 5235
+    },
+    "COMPATIBILITY_MATRIX.json": {
+      "sha256": "09af0dcc9c6f47c54cec2ba50278c2b746352f9cc8b930ed0ff8a4c1de28ea49",
+      "bytes": 3146
+    },
+    "CORRECTION_NOTES.md": {
+      "sha256": "e8e87b5ae68e4e2aa9ea0b7672eb15eba7c71c4911c7053a6f738b806ef36dcd",
+      "bytes": 4979
+    },
+    "LICENSE_REVIEW.md": {
+      "sha256": "b519f36312dbbaa34ad2308582785ca7a8d5500ca6f39c6902563f923ce2bdf4",
+      "bytes": 2082
+    },
+    "README.md": {
+      "sha256": "f4a5dd81307f1d76bf8760c8f320b7a71f8b4a40182f7b9d4807be473db161c8",
+      "bytes": 2612
+    },
+    "VERIFIER_COMPATIBILITY.md": {
+      "sha256": "9c0f5dd5594291e2e9e62273d2b83e50850f4954e44d477944f7695faf6b31d1",
+      "bytes": 1867
+    },
+    "dependency_notes/LICENSE_AND_SOURCE_USE.md": {
+      "sha256": "2651a168bb6d9f70173f24e12a80f8d4f7bac0b0c9842fca9fcef2cdffdd7061",
+      "bytes": 731
+    },
+    "dependency_notes/PROVENANCE_AND_ATTRIBUTION.md": {
+      "sha256": "3b65972241f0aea883b7d49f750bf52b3ad819d39c048b24c3cb33dab8476cc2",
+      "bytes": 2195
+    },
+    "higgs_camera_review/__init__.py": {
+      "sha256": "53dbc96b5f4426ff727e85b8b884fb062e02d7f74e849dee64ac5ff76bc8bb48",
+      "bytes": 93
+    },
+    "higgs_camera_review/assessment_format.py": {
+      "sha256": "e3bc50c80ada2a5f43eb00f91be6d955d4e87e7b8639ac3e671894fecbd9949f",
+      "bytes": 11001
+    },
+    "higgs_camera_review/assurance.py": {
+      "sha256": "936f724d2fcfcb81322a96f4f0be1bc144900031774986b2c4fd1934468d1db6",
+      "bytes": 3179
+    },
+    "higgs_camera_review/bounded_json.py": {
+      "sha256": "6f2d187a1a76ac955fed149893f03aeae874fcba7679413f10094ecd35cab18e",
+      "bytes": 2021
+    },
+    "higgs_camera_review/compatibility.py": {
+      "sha256": "048490cf18d6e6e847e73a4b9abcdddf19708865b188338dc7b9f391a8c79335",
+      "bytes": 3822
+    },
+    "higgs_camera_review/contract.py": {
+      "sha256": "c94a9d34675e729a7510ed4072e0cabe361c03f246e97b4b1d71d47d5ab7794e",
+      "bytes": 5714
+    },
+    "higgs_camera_review/core.py": {
+      "sha256": "2891e432cc905747e18641bd6ac0e55b58c4fb2b070d963c1660ba8b8b586f43",
+      "bytes": 11493
+    },
+    "higgs_camera_review/data/approved_runtime_pins.json": {
+      "sha256": "30c58d2e90de638859c16cbb04fc2c6b68fd5955c05daf8005b265583d201f5f",
+      "bytes": 4335
+    },
+    "higgs_camera_review/data/assurance_policy.json": {
+      "sha256": "09af0dcc9c6f47c54cec2ba50278c2b746352f9cc8b930ed0ff8a4c1de28ea49",
+      "bytes": 3146
+    },
+    "higgs_camera_review/data/higgs-v012-runtime-subset.zip": {
+      "sha256": "6a9ebaf312febd9f6581304f29290dfc0a6ab3cfa43b4c9e71d17d518b4104ae",
+      "bytes": 97128
+    },
+    "higgs_camera_review/data/historical-verifier-v0.1.1.zip": {
+      "sha256": "96f99c16314a57e7c1eb6c6e769e3cae7af2e0cb4081b5423eb23e3554b6bfb6",
+      "bytes": 130607
+    },
+    "higgs_camera_review/data/historical-verifier-v0.1.2.zip": {
+      "sha256": "ef322e698e0c4c7f283f98b0136877cf1926f2504210beae88b36c6ceb310b69",
+      "bytes": 271240
+    },
+    "higgs_camera_review/data/subset_identity.json": {
+      "sha256": "768041a1c358f48cceed38080a21a790a9e6ee22267bf0047cffdc894563fefd",
+      "bytes": 1769
+    },
+    "higgs_camera_review/errors.py": {
+      "sha256": "f933f34db4e8bf48df587d90f79d643c73844dee8c88d57daf0f50b62d0b9b10",
+      "bytes": 1497
+    },
+    "higgs_camera_review/freshness.py": {
+      "sha256": "052940538016b34b5ef83bbe81aaa74769895492232d28d190706d8bf3c3bd51",
+      "bytes": 2633
+    },
+    "higgs_camera_review/inventree_adapter.py": {
+      "sha256": "a2fa1a38b61fb6b9157cbc6bbf50c7d13095fb2b646c6aac75228f2dfe9e218e",
+      "bytes": 3082
+    },
+    "higgs_camera_review/map_worker.py": {
+      "sha256": "e76db2ad7eca10c69cb04c03c028219e1e0b4ec2c1db157b5c537b0f4290ee64",
+      "bytes": 2724
+    },
+    "higgs_camera_review/plugin.py": {
+      "sha256": "2ff98446ca64fd2c90c75a4166493ca2d5fcffe3a60903c05bae85d7b81e6a9e",
+      "bytes": 1593
+    },
+    "higgs_camera_review/presentation.py": {
+      "sha256": "7de5366353b72f79435a47fa752690b612f54bff24da806f7d888773248e6101",
+      "bytes": 1351
+    },
+    "higgs_camera_review/provenance.py": {
+      "sha256": "52e5110f36f4a098f02d25e37afb68304ab17d847f2cdad35bcd3472ddda7c56",
+      "bytes": 3562
+    },
+    "higgs_camera_review/replay.py": {
+      "sha256": "d57e4b1942316b264bf31454de9168be6abb0e949ef5e586d42028bb102ef698",
+      "bytes": 338
+    },
+    "higgs_camera_review/static/panel.js": {
+      "sha256": "73c91eba1607e3a68ef5e7b5fa8106dee59d389b79332b082b612ef249ef9a63",
+      "bytes": 14645
+    },
+    "higgs_camera_review/summary.py": {
+      "sha256": "d62ec684b1e2be0561db47481b684bf385f49f57a99c0ffc7bc38378cf83d2b0",
+      "bytes": 4409
+    },
+    "higgs_camera_review/verification.py": {
+      "sha256": "7982e5650a243300e9ebf46f03f294aba03029ea8e7ef0fe5a1c92c38e5f09f0",
+      "bytes": 16010
+    },
+    "higgs_camera_review/views.py": {
+      "sha256": "efce2919d6f0f53b6c982e3b4c3b07ae82be61e86370105d2398c369bff4db63",
+      "bytes": 8519
+    },
+    "verify_assessment.py": {
+      "sha256": "a30d96b105345ba408fba124a9367f4283b703dc05a74081a7c0dab7e35c09cc",
+      "bytes": 106
+    }
+  }
+}
